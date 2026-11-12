@@ -183,8 +183,8 @@ export default function Footer() {
             <div className="p-4 md:p-6">
               <div className="h-[290px] overflow-y-auto space-y-3 pr-1" aria-live="polite">
                 {messages.map((message, index) => (
-                  <div key={index} className={\`flex \${message.role === 'user' ? 'justify-end' : 'justify-start'}\`}>
-                    <div dir={isArabic ? 'rtl' : 'ltr'} className={\`max-w-[88%] rounded-2xl px-4 py-3 text-xs leading-6 whitespace-pre-line \${message.role === 'user' ? 'bg-[#630102] text-[#EDEBDE] rounded-br-sm' : 'bg-[#EDEBDE] text-[#1B1716] rounded-bl-sm'}\`}>
+                  <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                    <div dir={isArabic ? 'rtl' : 'ltr'} className={`max-w-[88%] rounded-2xl px-4 py-3 text-xs leading-6 whitespace-pre-line ${message.role === 'user' ? 'bg-[#630102] text-[#EDEBDE] rounded-br-sm' : 'bg-[#EDEBDE] text-[#1B1716] rounded-bl-sm'}`}>
                       {message.content}
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function Footer() {
               <form onSubmit={(event) => { event.preventDefault(); sendMessage(draft); }} className="flex items-center gap-2 p-2 rounded-xl bg-black/30 border border-[#EDEBDE]/15 focus-within:border-[#810100] transition-colors">
                 <input value={draft} onChange={(event) => setDraft(event.target.value)} dir={isArabic ? 'rtl' : 'ltr'} placeholder={isArabic ? 'اسأل COBRA AI عن السيارات أو الموقع...' : 'Ask COBRA AI about cars or the website...'} className="min-w-0 flex-1 bg-transparent px-2 py-2 text-xs text-[#EDEBDE] placeholder:text-slate-500 outline-none" aria-label={isArabic ? 'اكتب رسالتك' : 'Type your message'} />
                 <button type="submit" disabled={!draft.trim()} aria-label={isArabic ? 'إرسال' : 'Send'} className="w-10 h-10 shrink-0 rounded-lg bg-[#810100] text-[#EDEBDE] flex items-center justify-center hover:bg-[#9A1717] disabled:opacity-40 transition-colors">
-                  <Send className={\`w-4 h-4 \${isArabic ? 'rotate-180' : ''}\`} />
+                  <Send className={`w-4 h-4 ${isArabic ? 'rotate-180' : ''}`} />
                 </button>
               </form>
               <p className="mt-3 text-[9px] text-slate-500 text-center">{isArabic ? 'نسخة تجريبية — الإجابات مبنية على معلومات الموقع الحالية' : 'Demo version — answers are based on current website content'}</p>
