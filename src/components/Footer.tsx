@@ -45,8 +45,8 @@ export default function Footer() {
     }
     if (asksLocation) {
       return isArabic
-        ? 'الموقع يذكر جنيف، سويسرا كموقع لـ COBRA MOTORS.'
-        : 'The website lists Geneva, Switzerland as the location of COBRA MOTORS.';
+        ? 'موقع COBRA MOTORS هو دمشق / صحنايا، سوريا.'
+        : 'COBRA MOTORS is located in Damascus / Sahnaya, Syria.';
     }
     if (asksCars || asksSpecs) {
       const fleet = CARS_FLEET.map((car) =>
@@ -84,8 +84,8 @@ export default function Footer() {
 
   const text = isArabic
     ? {
-        description: 'قمة الفخامة في عالم السيارات. صُممت في جنيف، وهُندست لتدوم إلى الأبد.',
-        location: 'جنيف، سويسرا',
+        description: 'قمة الفخامة في عالم السيارات. صُممت في دمشق، وهُندست لتدوم إلى الأبد.',
+        location: 'دمشق / صحنايا، سوريا',
         fleetModels: 'طرازات الأسطول',
         technology: 'التكنولوجيا',
         atelier: 'المشغل',
@@ -93,7 +93,7 @@ export default function Footer() {
         activeAerodynamics: 'الديناميكا الهوائية النشطة',
         neuralCockpit: 'نظام المقصورة العصبي',
         laserMatrix: 'إضاءة المصفوفة الليزرية',
-        provingGrounds: 'منشآت الاختبار في جنيف',
+        provingGrounds: 'منشآت الاختبار في صحنايا',
         customization: 'التخصيص حسب الطلب',
         sustainability: 'تقرير الاستدامة',
         chronology: 'التسلسل الزمني',
@@ -103,8 +103,8 @@ export default function Footer() {
         craftedBy: 'تصميم وتطوير',
       }
     : {
-        description: 'The pinnacle of luxury and performance automotive. Designed in Geneva, engineered for eternity.',
-        location: 'Geneva, Switzerland',
+        description: 'The pinnacle of luxury and performance automotive. Designed in Damascus, engineered for eternity.',
+        location: 'Damascus / Sahnaya, Syria',
         fleetModels: 'FLEET MODELS',
         technology: 'TECHNOLOGY',
         atelier: 'ATELIER',
@@ -112,7 +112,7 @@ export default function Footer() {
         activeAerodynamics: 'Active Aerodynamics',
         neuralCockpit: 'Neural Cockpit OS',
         laserMatrix: 'Laser Matrix Lighting',
-        provingGrounds: 'Geneva Proving Grounds',
+        provingGrounds: 'Sahnaya Proving Grounds',
         customization: 'Bespoke Customization',
         sustainability: 'Sustainability Report',
         chronology: 'Chronology',
