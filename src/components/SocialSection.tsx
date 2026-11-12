@@ -1,6 +1,6 @@
-import { useLanguage } from '../context/LanguageContext';
-
 'use client';
+
+import { useLanguage } from '../context/LanguageContext';
 
 const socialLinks = [
   {
