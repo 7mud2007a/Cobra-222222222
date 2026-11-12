@@ -10,11 +10,34 @@ interface NavbarProps {
 
 export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
   const [active, setActive] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const openTl = useRef<gsap.core.Timeline | null>(null);
   const closeTl = useRef<gsap.core.Timeline | null>(null);
 
   const { isArabic } = useLanguage();
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const difference = currentScrollY - previousScrollY;
+
+      if (currentScrollY < 80) {
+        setHeaderVisible(true);
+      } else if (difference > 5) {
+        setHeaderVisible(false);
+      } else if (difference < -5) {
+        setHeaderVisible(true);
+      }
+
+      previousScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -221,6 +244,19 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           z-index: 60;
           outline: none;
           pointer-events: auto;
+          transition: transform 0.35s ease;
+        }
+
+        .anim-nav-container.header-hidden button.btn {
+          transform: translate(-50%, calc(-50% - 120px));
+        }
+
+        .anim-nav-container .brand-mark {
+          transition: transform 0.35s ease;
+        }
+
+        .anim-nav-container.header-hidden .brand-mark {
+          transform: translateY(-120px);
         }
 
         @media (max-width: 640px) {
@@ -241,7 +277,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
         .anim-nav-container button.btn .icons svg,
         .anim-nav-container button.btn .icons svg path {
-          fill: #630102 !important;
+          fill: #1B1716 !important;
         }
 
         .anim-nav-container button.btn .icons svg {
@@ -369,9 +405,9 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
         }}
       />
 
-      <div className="anim-nav-container relative w-full max-w-full h-full box-border">
+      <div className={`anim-nav-container relative w-full max-w-full h-full box-border ${headerVisible ? '' : 'header-hidden'}`}>
         <div
-          className="fixed top-0 left-0 right-0 h-24 px-3 sm:px-6 md:px-14 flex items-center justify-center z-40 pointer-events-none w-full max-w-full box-border"
+          className="brand-mark fixed top-0 left-0 right-0 h-24 px-3 sm:px-6 md:px-14 flex items-center justify-center z-40 pointer-events-none w-full max-w-full box-border"
           dir="ltr"
         >
           <div
@@ -395,10 +431,10 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           <div className="btn--bg" />
           <div className="icons">
             <svg viewBox="0 0 448 512" className="line">
-              <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416s14.33-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+              <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416s14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
             </svg>
             <svg viewBox="0 0 320 512" className="close">
-              <path d="M310.6 361.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 32.8-45.3 0L160 301.3 54.7 406.7c-12.5 12.5-32.8 32.8-45.3 0s-32.8-32.8 0-45.3L114.7 256 9.4 150.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 210.7l105.3-105.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L205.3 256l105.3 105.4z" />
+              <path d="M310.6 361.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L160 301.3 54.7 406.7c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L114.7 256 9.4 150.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 210.7l105.3-105.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L205.3 256l105.3 105.4z" />
             </svg>
           </div>
         </button>
