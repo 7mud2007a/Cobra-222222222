@@ -79,13 +79,13 @@ export default function AboutSection() {
     <section
       id="about"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative py-28 px-6 md:px-16 w-full bg-white dark:bg-[#070b08] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
+      className="relative py-28 px-6 md:px-16 w-full bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Brand Philosophy Intro */}
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
-            <span className="inline-block text-xs font-mono tracking-[0.35em] uppercase text-[#223023] dark:text-[#88b08a]">
+            <span className="inline-block text-xs font-mono tracking-[0.35em] uppercase text-[#810100] dark:text-[#b64b48]">
               {text.heritage}
             </span>
 
@@ -94,7 +94,7 @@ export default function AboutSection() {
                 <>
                   {text.art}
                   <br />
-                  <span className="text-[#223023] dark:text-[#5a805d]">
+                  <span className="text-[#810100] dark:text-[#a20b0b]">
                     {text.automotive}
                   </span>{' '}
                   {text.perfection}
@@ -102,7 +102,7 @@ export default function AboutSection() {
               ) : (
                 <>
                   {text.art} <br />
-                  <span className="text-[#223023] dark:text-[#5a805d]">
+                  <span className="text-[#810100] dark:text-[#a20b0b]">
                     {text.automotive}
                   </span>{' '}
                   {text.perfection}
@@ -116,7 +116,7 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-black/10 dark:border-white/10">
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#223023] dark:text-[#88b08a]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#b64b48]">
                   100%
                 </span>
 
@@ -126,7 +126,7 @@ export default function AboutSection() {
               </div>
 
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#223023] dark:text-[#88b08a]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#b64b48]">
                   25
                 </span>
 
@@ -141,7 +141,7 @@ export default function AboutSection() {
         {/* Brand Timeline Milestones */}
         <div>
           <div className="text-center mb-12">
-            <span className="text-xs font-mono text-[#223023] dark:text-[#88b08a] uppercase tracking-widest block mb-2">
+            <span className="text-xs font-mono text-[#810100] dark:text-[#b64b48] uppercase tracking-widest block mb-2">
               {text.chronology}
             </span>
 
@@ -154,9 +154,9 @@ export default function AboutSection() {
             {milestones.map((m, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0e1610] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#223023] transition-colors"
+                className="p-6 rounded-2xl bg-[#f4f1e7] dark:bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#810100] transition-colors"
               >
-                <div className="text-4xl font-cinzel font-extrabold text-[#223023] dark:text-[#88b08a] mb-2">
+                <div className="text-4xl font-cinzel font-extrabold text-[#810100] dark:text-[#b64b48] mb-2">
                   {m.year}
                 </div>
 
