@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import AnimatedNavbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -8,6 +9,14 @@ import SocialSection from './components/SocialSection';
 import Footer from './components/Footer';
 
 export default function App() {
+  useLayoutEffect(() => {
+    // Always start at the hero instead of restoring a previous footer scroll position.
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   const handleNavigate = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (el) {
