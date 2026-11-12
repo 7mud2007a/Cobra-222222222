@@ -40,8 +40,8 @@ export default function Footer() {
 
     if (asksContact) {
       return isArabic
-        ? 'يمكنك التواصل معنا عبر البريد الإلكتروني: bznsman77@gmail.com أو الهاتف: +41 22 819 0000. ستجد هذه المعلومات أيضاً في قسم «تواصل معنا» أسفل الموقع.'
-        : 'You can reach us by email at bznsman77@gmail.com or by phone at +41 22 819 0000. These details are listed in the Contact section at the bottom of the website.';
+        ? 'يمكنك التواصل معنا عبر البريد الإلكتروني: bznsman77@gmail.com أو الهاتف: +963 935 110 004. ستجد هذه المعلومات أيضاً في قسم «تواصل معنا» أسفل الموقع.'
+        : 'You can reach us by email at bznsman77@gmail.com or by phone at +963 935 110 004. These details are listed in the Contact section at the bottom of the website.';
     }
     if (asksLocation) {
       return isArabic
@@ -360,7 +360,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-slate-300">
               <li className="flex items-center gap-2" dir="ltr">
                 <Phone className="w-3 h-3 text-[#b64b48] shrink-0" />
-                <span>+41 22 819 0000</span>
+                <span>+963 935 110 004</span>
               </li>
 
               <li>
