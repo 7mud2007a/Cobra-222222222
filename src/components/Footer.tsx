@@ -127,7 +127,7 @@ export default function Footer() {
               className="font-cinzel text-2xl md:text-3xl font-bold tracking-[0.25em] text-white"
               dir="ltr"
             >
-              VELTRION <span className="text-[#b64b48]">MOTORS</span>
+              COBRA <span className="text-[#b64b48]">MOTORS</span>
             </h2>
 
             <p className="font-sans text-xs text-slate-400 font-light leading-relaxed max-w-md">
@@ -442,7 +442,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <div dir={isArabic ? 'rtl' : 'ltr'}>
-            &copy; {new Date().getFullYear()} Veltrion Motors AG. {text.rights}
+            &copy; {new Date().getFullYear()} COBRA MOTORS AG. {text.rights}
           </div>
 
           <div className="flex items-center gap-2 group" dir={isArabic ? 'rtl' : 'ltr'}>
