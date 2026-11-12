@@ -25,8 +25,11 @@ export default function Footer() {
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Do not scroll anything on initial page load. Only move the chat's
+    // own scroll position after the user has started a conversation.
+    if (messages.length <= 1) return;
     const chat = chatContainerRef.current;
-    if (chat) chat.scrollTo({ top: chat.scrollHeight, behavior: 'smooth' });
+    if (chat) chat.scrollTop = chat.scrollHeight;
   }, [messages]);
 
   const getDemoReply = (question: string) => {
