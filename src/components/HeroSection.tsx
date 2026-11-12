@@ -70,7 +70,7 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
                 if (onExploreClick) onExploreClick();
               }}
-              className="px-8 py-4 bg-[#810100] hover:bg-[#a20b0b] text-white font-medium text-sm tracking-widest uppercase rounded-lg shadow-xl shadow-[#810100]/20 flex items-center justify-center space-x-3 transition-all duration-300 hover:translate-y-[-2px]"
+              className="px-8 py-4 bg-[#1B1716] hover:bg-[#302927] text-[#EDEBDE] font-medium text-sm tracking-widest uppercase rounded-lg shadow-xl shadow-[#1B1716]/20 flex items-center justify-center space-x-3 transition-all duration-300 hover:translate-y-[-2px]"
             >
               <span>{text.explore}</span>
               <ArrowRight className="w-4 h-4" />
