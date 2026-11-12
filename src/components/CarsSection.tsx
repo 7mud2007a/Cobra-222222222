@@ -11,6 +11,7 @@ import {
   ChevronRight,
   X,
   SlidersHorizontal,
+  MessageCircle,
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -228,6 +229,7 @@ export default function CarsSection() {
         keyFeatures: 'أهم التجهيزات المخصصة',
         estimatedPrice: 'السعر الابتدائي التقديري',
         reserve: 'طلب تخصيص',
+        whatsappInquiry: 'استفسر عن السيارة عبر واتساب',
         priceOnRequest: 'السعر عند الطلب',
       }
     : {
@@ -250,6 +252,7 @@ export default function CarsSection() {
         keyFeatures: 'KEY BESPOKE FEATURES',
         estimatedPrice: 'ESTIMATED STARTING PRICE',
         reserve: 'Reserve Allocation',
+        whatsappInquiry: 'ENQUIRE ABOUT THIS CAR ON WHATSAPP',
         priceOnRequest: 'PRICE ON REQUEST',
       };
 
@@ -543,20 +546,31 @@ export default function CarsSection() {
                       </span>
                     </div>
 
-                    <button
-                      onClick={() => {
-                        setSelectedCar(null);
-
-                        const el = document.getElementById('contact');
-
-                        if (el) {
-                          el.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className="w-full sm:w-auto px-8 py-3.5 bg-[#810100] hover:bg-[#a20b0b] text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all"
-                    >
-                      {text.reserve}
-                    </button>
+                    <div className="flex w-full sm:w-auto flex-col sm:flex-row gap-3">
+                      <a
+                        href={`https://wa.me/963935110004?text=${encodeURIComponent(
+                          isArabic
+                            ? `مرحباً COBRA MOTORS، أرغب بالاستفسار عن سيارة ${selectedCar.name}. ممكن معرفة السعر والتوفر والتفاصيل الإضافية وخيارات الشراء؟`
+                            : `Hello COBRA MOTORS, I’m interested in the ${selectedCar.name}. Could you share its price, availability, further details and purchase options?`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] hover:bg-[#1fba59] text-[#102719] font-mono text-xs font-bold uppercase tracking-wider rounded-lg transition-all inline-flex items-center justify-center gap-2"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        {text.whatsappInquiry}
+                      </a>
+                      <button
+                        onClick={() => {
+                          setSelectedCar(null);
+                          const el = document.getElementById('contact');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="w-full sm:w-auto px-6 py-3.5 border border-[#EDEBDE]/20 hover:bg-[#EDEBDE]/10 text-[#EDEBDE] font-mono text-xs uppercase tracking-widest rounded-lg transition-all"
+                      >
+                        {text.reserve}
+                      </button>
+                    </div>
                   </div>
                 </>
               );
