@@ -224,45 +224,17 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-2.5 text-slate-300">
-              <li>
-                <a
-                  href="#cars"
-                  className="hover:text-[#b64b48] transition-colors"
-                  dir="ltr"
-                >
-                  Mercedes-AMG S 63 E PERFORMANCE
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#cars"
-                  className="hover:text-[#b64b48] transition-colors"
-                  dir="ltr"
-                >
-                  BMW M4 CSL
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#cars"
-                  className="hover:text-[#b64b48] transition-colors"
-                  dir="ltr"
-                >
-                  Toyota Supra MK4 Turbo
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#cars"
-                  className="hover:text-[#b64b48] transition-colors"
-                  dir="ltr"
-                >
-                  Nissan GT-R R35
-                </a>
-              </li>
+              {CARS_FLEET.map((car) => (
+                <li key={car.id}>
+                  <a
+                    href="#cars"
+                    className="hover:text-[#b64b48] transition-colors"
+                    dir="ltr"
+                  >
+                    {car.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
