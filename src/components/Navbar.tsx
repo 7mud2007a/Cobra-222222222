@@ -2,9 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { Sun, Moon, Languages } from 'lucide-react';
+import { Languages } from 'lucide-react';
 
 interface NavbarProps {
   onNavigate?: (sectionId: string) => void;
@@ -16,7 +15,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
   const openTl = useRef<gsap.core.Timeline | null>(null);
   const closeTl = useRef<gsap.core.Timeline | null>(null);
 
-  const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, isArabic } = useLanguage();
 
   useEffect(() => {
@@ -187,7 +185,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
         inquire: 'استفسار',
         switchToEnglish: 'التبديل إلى الإنجليزية',
         switchToArabic: 'التبديل إلى العربية',
-        toggleTheme: 'تبديل المظهر',
         navigation: 'تبديل قائمة التنقل',
       }
     : {
@@ -199,7 +196,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
         inquire: 'Inquire',
         switchToEnglish: 'Switch to English',
         switchToArabic: 'Switch to Arabic',
-        toggleTheme: 'Toggle Theme',
         navigation: 'Toggle Navigation Menu',
       };
 
@@ -373,7 +369,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
       <div className="anim-nav-container relative w-full max-w-full h-full box-border">
         <div
-          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#1B1716]/90 border-b border-black/5 dark:border-white/5 transition-colors duration-300 w-full max-w-full box-border"
+          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#1B1716]/90 border-b border-white/5 transition-colors duration-300 w-full max-w-full box-border"
           dir="ltr"
         >
           <div className="w-12 sm:w-16 md:w-20 flex-shrink-0"></div>
@@ -384,48 +380,32 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           >
             <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-[#EDEBDE] transition-colors duration-300 whitespace-nowrap truncate">
               COBRA{' '}
-              <span className="text-[#810100] dark:text-[#a20b0b]">
+              <span className="text-[#810100]">
                 MOTORS
               </span>
             </span>
           </div>
 
           <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-            <div className="flex items-center gap-2">
-              <button
-                onClick={toggleLanguage}
-                className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-black/10 dark:border-white/10"
-                title={
-                  language === 'EN'
-                    ? labels.switchToArabic
-                    : labels.switchToEnglish
-                }
-                aria-label={
-                  language === 'EN'
-                    ? labels.switchToArabic
-                    : labels.switchToEnglish
-                }
-              >
-                <Languages className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-
-                <span className="text-[9px] sm:text-[10px] font-bold tracking-widest">
-                  {language}
-                </span>
-              </button>
-
-              <button
-                onClick={toggleTheme}
-                className="p-1.5 sm:p-2.5 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-black/10 dark:border-white/10"
-                title={labels.toggleTheme}
-                aria-label={labels.toggleTheme}
-              >
-                {theme === 'dark' ? (
-                  <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" />
-                ) : (
-                  <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-700" />
-                )}
-              </button>
-            </div>
+            <button
+              onClick={toggleLanguage}
+              className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-[#EDEBDE]/10 hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-white/10"
+              title={
+                language === 'EN'
+                  ? labels.switchToArabic
+                  : labels.switchToEnglish
+              }
+              aria-label={
+                language === 'EN'
+                  ? labels.switchToArabic
+                  : labels.switchToEnglish
+              }
+            >
+              <Languages className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span className="text-[9px] sm:text-[10px] font-bold tracking-widest">
+                {language}
+              </span>
+            </button>
 
             <button
               onClick={() => handleNavClick('contact')}
@@ -442,39 +422,23 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           aria-label={labels.navigation}
         >
           <div className="btn--bg" />
-
           <div className="icons">
             <svg viewBox="0 0 448 512" className="line">
-              <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+              <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416s14.33-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
             </svg>
-
             <svg viewBox="0 0 320 512" className="close">
-              <path d="M310.6 361.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L160 301.3 54.7 406.7c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L114.7 256 9.4 150.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 210.7l105.3-105.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L205.3 256l105.3 105.4z" />
+              <path d="M310.6 361.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 32.8-45.3 0L160 301.3 54.7 406.7c-12.5 12.5-32.8 32.8-45.3 0s-32.8-32.8 0-45.3L114.7 256 9.4 150.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 210.7l105.3-105.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L205.3 256l105.3 105.4z" />
             </svg>
           </div>
         </button>
 
         <nav dir={isArabic ? 'rtl' : 'ltr'}>
           <ul>
-            <li onClick={() => handleNavClick('hero')}>
-              <span>{labels.home}</span>
-            </li>
-
-            <li onClick={() => handleNavClick('cars')}>
-              <span>{labels.cars}</span>
-            </li>
-
-            <li onClick={() => handleNavClick('technology')}>
-              <span>{labels.technology}</span>
-            </li>
-
-            <li onClick={() => handleNavClick('about')}>
-              <span>{labels.about}</span>
-            </li>
-
-            <li onClick={() => handleNavClick('contact')}>
-              <span>{labels.contact}</span>
-            </li>
+            <li onClick={() => handleNavClick('hero')}><span>{labels.home}</span></li>
+            <li onClick={() => handleNavClick('cars')}><span>{labels.cars}</span></li>
+            <li onClick={() => handleNavClick('technology')}><span>{labels.technology}</span></li>
+            <li onClick={() => handleNavClick('about')}><span>{labels.about}</span></li>
+            <li onClick={() => handleNavClick('contact')}><span>{labels.contact}</span></li>
           </ul>
         </nav>
       </div>
