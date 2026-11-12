@@ -249,7 +249,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          fill: #ffffff;
+          fill: #EDEBDE;
         }
 
         .anim-nav-container button.btn .icons svg.close {
