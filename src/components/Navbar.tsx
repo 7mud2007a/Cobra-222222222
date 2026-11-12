@@ -268,14 +268,14 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           transform: translate(-50%, -50%);
           width: 100%;
           height: 100%;
-          background: #223023;
+          background: #810100;
           border-radius: 25%;
-          box-shadow: 0 8px 25px rgba(34, 48, 35, 0.4);
+          box-shadow: 0 8px 25px rgba(129, 1, 0, 0.4);
           transition: background 0.3s ease;
         }
 
         .anim-nav-container button.btn:hover .btn--bg {
-          background: #2c3e2e;
+          background: #a20b0b;
         }
 
         .anim-nav-container nav {
@@ -287,7 +287,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          background: #223023;
+          background: #810100;
           clip-path: circle(0px at 60px 60px);
           -webkit-clip-path: circle(0px at 60px 60px);
           z-index: 50;
@@ -373,7 +373,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
       <div className="anim-nav-container relative w-full max-w-full h-full box-border">
         <div
-          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-white/30 dark:bg-[#070b08]/30 border-b border-black/5 dark:border-white/5 transition-colors duration-300 w-full max-w-full box-border"
+          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#EDEBDE]/30 dark:bg-[#1B1716]/30 border-b border-black/5 dark:border-white/5 transition-colors duration-300 w-full max-w-full box-border"
           dir="ltr"
         >
           <div className="w-12 sm:w-16 md:w-20 flex-shrink-0"></div>
@@ -384,7 +384,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           >
             <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-slate-900 dark:text-white transition-colors duration-300 whitespace-nowrap truncate">
               VELTRION{' '}
-              <span className="text-[#223023] dark:text-[#5a7d5c]">
+              <span className="text-[#810100] dark:text-[#a20b0b]">
                 MOTORS
               </span>
             </span>
@@ -394,7 +394,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleLanguage}
-                className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
+                className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
                 title={
                   language === 'EN'
                     ? labels.switchToArabic
@@ -415,7 +415,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
               <button
                 onClick={toggleTheme}
-                className="p-1.5 sm:p-2.5 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
+                className="p-1.5 sm:p-2.5 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
                 title={labels.toggleTheme}
                 aria-label={labels.toggleTheme}
               >
@@ -429,7 +429,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
             <button
               onClick={() => handleNavClick('contact')}
-              className="hidden sm:block px-4 md:px-5 py-2 text-[10px] md:text-xs font-semibold tracking-widest text-white uppercase bg-[#223023] hover:bg-[#2c3e2e] rounded-md transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
+              className="hidden sm:block px-4 md:px-5 py-2 text-[10px] md:text-xs font-semibold tracking-widest text-white uppercase bg-[#810100] hover:bg-[#a20b0b] rounded-md transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
             >
               {labels.inquire}
             </button>
