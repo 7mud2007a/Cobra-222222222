@@ -244,7 +244,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
         .anim-nav-container button.btn .icons svg,
         .anim-nav-container button.btn .icons svg path {
-          fill: #EDEBDE !important;
+          fill: #1B1716 !important;
         }
 
         .anim-nav-container button.btn .icons svg {
@@ -268,14 +268,15 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           transform: translate(-50%, -50%);
           width: 100%;
           height: 100%;
-          background: #810100;
+          background: #EDEBDE;
+          border: 1px solid rgba(27, 23, 22, 0.12);
           border-radius: 25%;
-          box-shadow: 0 8px 25px rgba(129, 1, 0, 0.4);
+          box-shadow: 0 8px 25px rgba(27, 23, 22, 0.18);
           transition: background 0.3s ease;
         }
 
         .anim-nav-container button.btn:hover .btn--bg {
-          background: #a20b0b;
+          background: #D8D2C1;
         }
 
         .anim-nav-container nav {
