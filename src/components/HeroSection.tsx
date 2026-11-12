@@ -90,10 +90,10 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
 
           <div
             dir={isArabic ? 'rtl' : 'ltr'}
-            className="flex items-center space-x-6 text-xs text-[#630102]"
+            className="flex items-center space-x-6 text-xs text-[#1B1716]"
           >
             <div className="flex items-center space-x-2">
-              <Zap className="w-4 h-4 text-[#810100]" />
+              <Zap className="w-4 h-4 text-[#1B1716]" />
               <span>{text.electric}</span>
             </div>
 
