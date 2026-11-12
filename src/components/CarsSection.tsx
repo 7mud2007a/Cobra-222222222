@@ -31,7 +31,7 @@ export interface CarModel {
   features: string[];
 }
 
-const CARS_FLEET: CarModel[] = [
+export const CARS_FLEET: CarModel[] = [
   {
     id: 'mercedes-amg-s-63-e-performance',
     name: 'Mercedes-AMG S 63 E PERFORMANCE',
