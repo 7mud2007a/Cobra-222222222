@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useLanguage } from '../context/LanguageContext';
-import { Languages } from 'lucide-react';
 
 interface NavbarProps {
   onNavigate?: (sectionId: string) => void;
@@ -15,7 +14,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
   const openTl = useRef<gsap.core.Timeline | null>(null);
   const closeTl = useRef<gsap.core.Timeline | null>(null);
 
-  const { language, toggleLanguage, isArabic } = useLanguage();
+  const { isArabic } = useLanguage();
 
   useEffect(() => {
     const el = containerRef.current;
@@ -183,8 +182,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
         about: 'عن الشركة',
         contact: 'تواصل معنا',
         inquire: 'استفسار',
-        switchToEnglish: 'التبديل إلى الإنجليزية',
-        switchToArabic: 'التبديل إلى العربية',
         navigation: 'تبديل قائمة التنقل',
       }
     : {
@@ -392,26 +389,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           </div>
 
           <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-            <button
-              onClick={toggleLanguage}
-              className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-[#EDEBDE]/10 hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-white/10"
-              title={
-                language === 'EN'
-                  ? labels.switchToArabic
-                  : labels.switchToEnglish
-              }
-              aria-label={
-                language === 'EN'
-                  ? labels.switchToArabic
-                  : labels.switchToEnglish
-              }
-            >
-              <Languages className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              <span className="text-[9px] sm:text-[10px] font-bold tracking-widest">
-                {language}
-              </span>
-            </button>
-
             <button
               onClick={() => handleNavClick('contact')}
               className="hidden sm:block px-4 md:px-5 py-2 text-[10px] md:text-xs font-semibold tracking-widest text-white uppercase bg-[#810100] hover:bg-[#a20b0b] rounded-md transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
