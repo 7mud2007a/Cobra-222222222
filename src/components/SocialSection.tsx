@@ -72,16 +72,18 @@ const socialLinks = [
 ];
 
 export default function AnimatedNavList() {
+  const { isArabic } = useLanguage();
+
   return (
-    <section id="social" className="relative py-24 px-6 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5">
+    <section id="social" dir={isArabic ? "rtl" : "ltr"} className="relative py-24 px-6 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5">
 
       {/* Title */}
       <div className="text-center max-w-xl mx-auto mb-12">
         <span className="text-xs font-mono text-[#810100] dark:text-[#b64b48] uppercase tracking-[0.35em] block mb-2">
-          [ CONNECT & FOLLOW ]
+          {isArabic ? '[ تواصل وتابعنا ]' : '[ CONNECT & FOLLOW ]'}
         </span>
         <h2 className="font-cinzel text-3xl sm:text-4xl font-bold tracking-tight">
-          CONNECT WITH <span className="text-[#810100] dark:text-[#a20b0b]">COBRA</span>
+          {isArabic ? 'تواصل مع ' : 'CONNECT WITH '}<span className="text-[#810100] dark:text-[#a20b0b]">COBRA</span>
         </h2>
       </div>
 
