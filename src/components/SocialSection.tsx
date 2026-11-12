@@ -73,15 +73,15 @@ const socialLinks = [
 
 export default function AnimatedNavList() {
   return (
-    <section id="social" className="relative py-24 px-6 w-full bg-slate-50 dark:bg-[#070b08] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5">
+    <section id="social" className="relative py-24 px-6 w-full bg-[#f4f1e7] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5">
 
       {/* Title */}
       <div className="text-center max-w-xl mx-auto mb-12">
-        <span className="text-xs font-mono text-[#223023] dark:text-[#88b08a] uppercase tracking-[0.35em] block mb-2">
+        <span className="text-xs font-mono text-[#810100] dark:text-[#b64b48] uppercase tracking-[0.35em] block mb-2">
           [ CONNECT & FOLLOW ]
         </span>
         <h2 className="font-cinzel text-3xl sm:text-4xl font-bold tracking-tight">
-          CONNECT WITH <span className="text-[#223023] dark:text-[#5a805d]">VELTRION</span>
+          CONNECT WITH <span className="text-[#810100] dark:text-[#a20b0b]">VELTRION</span>
         </h2>
       </div>
 
@@ -132,11 +132,11 @@ export default function AnimatedNavList() {
             animation:
                 firstShow 0.5s ease-in-out,
                 show 0.15s linear forwards;
-            border: 1px solid rgba(34, 48, 35, 0.12);
+            border: 1px solid rgba(129, 1, 0, 0.12);
           }
 
           .dark .navlist-li {
-            background: #0e1610;
+            background: #261e1c;
             border-color: rgba(255, 255, 255, 0.08);
           }
 
@@ -161,12 +161,12 @@ export default function AnimatedNavList() {
           .navlist-li:focus-within {
             transform: translate3d(0, 0, 3rem);
             z-index: 10;
-            background: #223023;
+            background: #810100;
           }
 
           .dark .navlist-li:hover,
           .dark .navlist-li:focus-within {
-            background: #223023;
+            background: #810100;
           }
 
           .navlist-li:hover .navlist-link,
