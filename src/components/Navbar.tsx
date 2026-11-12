@@ -242,6 +242,11 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           overflow: hidden;
         }
 
+        .anim-nav-container button.btn .icons svg,
+        .anim-nav-container button.btn .icons svg path {
+          fill: #EDEBDE !important;
+        }
+
         .anim-nav-container button.btn .icons svg {
           position: absolute;
           width: 50%;
@@ -249,7 +254,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          fill: #EDEBDE;
         }
 
         .anim-nav-container button.btn .icons svg.close {
