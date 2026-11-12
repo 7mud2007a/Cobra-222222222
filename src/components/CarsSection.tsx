@@ -2,7 +2,7 @@ import { useState } from 'react';
 import porsche911GT3RS from '../assets/cars/147647342_1794335360339586.jpg';
 import mercedesAMGG63 from '../assets/cars/966433920_1794336494676749.jpg';
 import ferrariF8Tributo from '../assets/cars/954590984_1794338173823801.jpg';
-import nissanGTR from '../assets/cars/nissan_gt-r_r35.jpg';
+import rollsRoyceGhost from '../assets/cars/1012560791_1794339001634125.jpg';
 import {
   ArrowUpRight,
   Gauge,
@@ -105,25 +105,27 @@ export const CARS_FLEET: CarModel[] = [
     ],
   },
   {
-    id: 'nissan-gt-r-r35',
-    name: 'Nissan GT-R R35',
-    tagline: 'Twin-Turbocharged Japanese Performance',
-    category: 'Hypercar',
+    id: 'rolls-royce-ghost',
+    name: 'ROLLS ROYCE GHOST',
+    tagline: 'Effortless V12 power wrapped in modern British luxury',
+    category: 'Luxury Saloon',
     price: 'PRICE ON REQUEST',
-    hp: 565,
-    acceleration: '2.9s',
-    topSpeed: '195 MPH',
-    range: 'ATTESA AWD',
-    drivetrain: 'ATTESA E-TS AWD',
-    imagePlaceholder: nissanGTR,
-    badge: 'ICON',
+    hp: 563,
+    acceleration: '4.6s',
+    topSpeed: '155 MPH',
+    range: 'All-Wheel Drive',
+    drivetrain: '8-speed automatic · AWD',
+    imagePlaceholder: rollsRoyceGhost,
+    badge: 'PURE LUXURY',
     description:
-      'The pinnacle of Japanese supercar engineering featuring a handcrafted VR38DETT twin-turbo V6 engine, advanced ATTESA E-TS all-wheel drive, and precise track-tested launch control.',
+      'The Rolls-Royce Ghost pairs a 6.75-litre twin-turbocharged V12 with effortless all-wheel-drive performance and the marque’s signature serenity. Its aluminium Architecture of Luxury, all-wheel steering and Planar Suspension System deliver a composed, exceptionally refined driving experience.',
     features: [
-      'Takumi Handbuilt VR38DETT Twin-Turbo V6',
-      'ATTESA E-TS All-Wheel Drive System',
-      'Brembo Monoblock Braking System',
-      'Bilstein DampTronic Adaptive Suspension',
+      '6.75L twin-turbocharged V12 engine',
+      '563 hp and 850 Nm of torque',
+      '8-speed automatic transmission',
+      'All-wheel drive and all-wheel steering',
+      'Planar Suspension System with road-scanning Flagbearer technology',
+      '0–60 mph in 4.6 seconds · 155 mph top speed',
     ],
   },
 ];
@@ -183,17 +185,19 @@ const CAR_TRANSLATIONS: Record<
       'تسارع 0–100 كم/س خلال 2.9 ثانية · سرعة قصوى 340 كم/س',
     ],
   },
-  'nissan-gt-r-r35': {
-    tagline: 'أداء ياباني مزدوج التوربو',
-    category: 'هايبركار',
-    badge: 'أيقونة',
+  'rolls-royce-ghost': {
+    tagline: 'قوة V12 سلسة وفخامة بريطانية عصرية',
+    category: 'سيدان فاخرة',
+    badge: 'فخامة خالصة',
     description:
-      'قمة هندسة السيارات الخارقة اليابانية، بمحرك VR38DETT V6 مزدوج التوربو مصنوع يدويًا، ونظام دفع متقدم ATTESA E-TS بجميع العجلات، ونظام تحكم بالإطلاق تم اختباره بدقة على الحلبات.',
+      'تجمع Rolls-Royce Ghost بين محرك V12 مزدوج التيربو سعة 6.75 لتر ونظام دفع رباعي يمنحها أداءً سلسًا وهادئًا. وتعتمد على هيكل Architecture of Luxury المصنوع من الألمنيوم، مع نظام توجيه للعجلات الأربع وتعليق Planar Suspension لتجربة قيادة فائقة الراحة والثبات.',
     features: [
-      'محرك VR38DETT V6 مزدوج التوربو مصنوع يدويًا',
-      'نظام ATTESA E-TS للدفع بجميع العجلات',
-      'نظام مكابح Brembo Monoblock',
-      'تعليق Bilstein DampTronic متكيف',
+      'محرك V12 مزدوج التيربو سعة 6.75 لتر',
+      'قوة 563 حصانًا وعزم 850 نيوتن متر',
+      'ناقل حركة أوتوماتيكي بثماني سرعات',
+      'دفع رباعي مع توجيه للعجلات الأربع',
+      'نظام تعليق Planar Suspension وتقنية Flagbearer لمسح الطريق',
+      'تسارع 0–60 ميل/س خلال 4.6 ثوانٍ · سرعة قصوى 155 ميل/س',
     ],
   },
 };
