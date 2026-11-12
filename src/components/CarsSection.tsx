@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import porsche911GT3RS from '../assets/cars/147647342_1794335360339586.jpg';
 import mercedesAMGG63 from '../assets/cars/966433920_1794336494676749.jpg';
-import supraMK4 from '../assets/cars/Toyota_supra_mk4.jpg';
+import ferrariF8Tributo from '../assets/cars/954590984_1794338173823801.jpg';
 import nissanGTR from '../assets/cars/nissan_gt-r_r35.jpg';
 import {
   ArrowUpRight,
@@ -81,25 +81,27 @@ export const CARS_FLEET: CarModel[] = [
     ],
   },
   {
-    id: 'toyota-supra-mk4-turbo',
-    name: 'Toyota Supra MK4 Turbo',
-    tagline: 'The Legendary 2JZ Performance Icon',
+    id: 'ferrari-f8-tributo',
+    name: 'FERRARI F8 TRIBUTO',
+    tagline: 'The ultimate tribute to Ferrari’s mid-rear V8 berlinetta',
     category: 'Hypercar',
     price: 'PRICE ON REQUEST',
-    hp: 320,
-    acceleration: '4.6s',
-    topSpeed: '155 MPH',
-    range: 'RWD Legend',
-    drivetrain: 'Rear-Wheel Drive',
-    imagePlaceholder: supraMK4,
-    badge: 'LEGENDARY',
+    hp: 710,
+    acceleration: '2.9s',
+    topSpeed: '211 MPH',
+    range: 'Rear-Wheel Drive',
+    drivetrain: '7-speed F1 dual-clutch · RWD',
+    imagePlaceholder: ferrariF8Tributo,
+    badge: 'ITALIAN EXCELLENCE',
     description:
-      'The iconic fourth-generation Supra MK4 Turbo powered by the legendary 2JZ-GTE sequential twin-turbo inline-6, delivering timeless Japanese sports car heritage and unmatched tuning potential.',
+      'The Ferrari F8 Tributo is powered by a 3.9-litre 90-degree twin-turbo V8 mounted in a mid-rear position. Producing 720 cv (approximately 710 hp) and 770 Nm, it combines Ferrari’s advanced aerodynamics and driver-focused technology with breathtaking performance.',
     features: [
-      '2JZ-GTE Twin-Turbocharged Inline-6',
-      'Getrag 6-Speed Manual Transmission',
-      'Cockpit-Oriented Dashboard Layout',
-      'Active Aerodynamic Rear Wing',
+      '3,902 cc 90-degree twin-turbo V8',
+      '720 cv (approximately 710 hp) and 770 Nm of torque',
+      '7-speed F1 dual-clutch transmission',
+      'Rear-wheel drive with E-Diff3 electronic differential',
+      'Ferrari Side Slip Control 6.1 and FDE+',
+      '0–100 km/h in 2.9 seconds · 340 km/h top speed',
     ],
   },
   {
@@ -166,17 +168,19 @@ const CAR_TRANSLATIONS: Record<
       'تسارع 0–100 كم/س خلال 4.4 ثوانٍ · سرعة قصوى 220 كم/س',
     ],
   },
-  'toyota-supra-mk4-turbo': {
-    tagline: 'أيقونة الأداء الأسطورية بمحرك 2JZ',
+  'ferrari-f8-tributo': {
+    tagline: 'تحفة فيراري بمحرك V8 وسطي خلفي مزدوج التيربو',
     category: 'هايبركار',
-    badge: 'أسطورية',
+    badge: 'إبداع إيطالي',
     description:
-      'الجيل الرابع الأيقوني من Supra MK4 Turbo، مدفوع بمحرك 2JZ-GTE الأسطوري سداسي الأسطوانات مع شاحنَي توربو متتابعين، ليقدم إرث السيارات الرياضية اليابانية وإمكانات تعديل استثنائية.',
+      'تعمل Ferrari F8 Tributo بمحرك V8 بزاوية 90 درجة وسعة 3.9 لتر مع شاحني تيربو، مثبت بوضعية وسطية خلفية. يولد المحرك 720 حصانًا متريًا (نحو 710 حصان ميكانيكي) و770 نيوتن متر، مع ديناميكا هوائية متطورة وتقنيات تركّز على السائق.',
     features: [
-      'محرك 2JZ-GTE سداسي الأسطوانات مزدوج التوربو',
-      'ناقل حركة يدوي Getrag بست سرعات',
-      'تصميم لوحة قيادة موجه للسائق',
-      'جناح خلفي ديناميكي هوائي نشط',
+      'محرك V8 مزدوج التيربو سعة 3902 سم³ بزاوية 90 درجة',
+      'قوة 720 حصانًا متريًا (نحو 710 HP) وعزم 770 نيوتن متر',
+      'ناقل حركة F1 مزدوج القابض بسبع سرعات',
+      'دفع خلفي مع ترس تفاضلي إلكتروني E-Diff3',
+      'نظام Ferrari Side Slip Control 6.1 وتقنية FDE+',
+      'تسارع 0–100 كم/س خلال 2.9 ثانية · سرعة قصوى 340 كم/س',
     ],
   },
   'nissan-gt-r-r35': {
