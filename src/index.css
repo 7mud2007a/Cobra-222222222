@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  --color-veltrion: #810100;
-  --color-veltrion-maroon: #630102;
-  --color-veltrion-ivory: #EDEBDE;
-  --color-veltrion-noir: #1B1716;
-  --color-veltrion-hover: #a20b0b;
+  --color-COBRA: #810100;
+  --color-COBRA-maroon: #630102;
+  --color-COBRA-ivory: #EDEBDE;
+  --color-COBRA-noir: #1B1716;
+  --color-COBRA-hover: #a20b0b;
 }
 
 @layer base {
@@ -76,7 +76,7 @@
 }
 
 .dark .glass-panel {
-  background: rgba(14, 22, 16, 0.75);
+  background: rgba(27, 23, 22, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(129, 1, 0, 0.4);
@@ -88,19 +88,19 @@
 }
 
 /* Animated gradient text */
-.text-gradient-veltrion {
+.text-gradient-COBRA {
   background: linear-gradient(135deg, #ffffff 0%, #810100 50%, #b64b48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.dark .text-gradient-veltrion-light {
+.dark .text-gradient-COBRA-light {
   background: linear-gradient(135deg, #ffffff 0%, #d27b76 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.light .text-gradient-veltrion-dark {
+.light .text-gradient-COBRA-dark {
   background: linear-gradient(135deg, #0f172a 0%, #810100 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
