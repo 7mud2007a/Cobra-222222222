@@ -98,7 +98,7 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
             </div>
 
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="w-4 h-4 text-[#810100]" />
+              <ShieldCheck className="w-4 h-4 text-[#1B1716]" />
               <span>{text.warranty}</span>
             </div>
           </div>
