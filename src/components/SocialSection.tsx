@@ -73,7 +73,7 @@ const socialLinks = [
 
 export default function AnimatedNavList() {
   return (
-    <section id="social" className="relative py-24 px-6 w-full bg-[#f4f1e7] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5">
+    <section id="social" className="relative py-24 px-6 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5">
 
       {/* Title */}
       <div className="text-center max-w-xl mx-auto mb-12">
@@ -81,7 +81,7 @@ export default function AnimatedNavList() {
           [ CONNECT & FOLLOW ]
         </span>
         <h2 className="font-cinzel text-3xl sm:text-4xl font-bold tracking-tight">
-          CONNECT WITH <span className="text-[#810100] dark:text-[#a20b0b]">VELTRION</span>
+          CONNECT WITH <span className="text-[#810100] dark:text-[#a20b0b]">COBRA</span>
         </h2>
       </div>
 
