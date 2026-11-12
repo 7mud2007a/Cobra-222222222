@@ -100,8 +100,8 @@ export default function TechSection() {
         titleFirst: 'هندسة بلا',
         titleHighlight: 'تنازلات',
         intro:
-          'تجمع Veltrion Motors بين ديناميكيات رياضة السيارات والدفع الكهربائي الكمومي لابتكار الجيل القادم من أداء السيارات الخارقة.',
-        academy: '[ أكاديمية VELTRION ]',
+          'تجمع COBRA MOTORS بين ديناميكيات رياضة السيارات والدفع الكهربائي الكمومي لابتكار الجيل القادم من أداء السيارات الخارقة.',
+        academy: '[ أكاديمية COBRA ]',
         academyTitle: 'اختبر توجيه العزم الكمومي بنفسك',
         academyDescription:
           'احجز جلسة إحاطة تقنية مع كبار مهندسي الديناميكا الهوائية لدينا في منشآتنا الأوروبية المخصصة للاختبارات.',
@@ -112,8 +112,8 @@ export default function TechSection() {
         titleFirst: 'ENGINEERED WITHOUT',
         titleHighlight: 'COMPROMISE',
         intro:
-          'Veltrion Motors fuses motorsport aerodynamics with quantum electric propulsion to pioneer the next generation of hyper-automotive performance.',
-        academy: '[ VELTRION ACADEMY ]',
+          'COBRA MOTORS fuses motorsport aerodynamics with quantum electric propulsion to pioneer the next generation of hyper-automotive performance.',
+        academy: '[ COBRA ACADEMY ]',
         academyTitle: 'Experience Quantum Torque Vectoring In Person',
         academyDescription:
           'Schedule a technical briefing session with our senior aerodynamic engineers at our European proving grounds.',
@@ -124,7 +124,7 @@ export default function TechSection() {
     <section
       id="technology"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative py-28 px-6 md:px-16 w-full bg-[#f4f1e7] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
+      className="relative py-28 px-6 md:px-16 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
       {/* Background Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#810100]/10 dark:bg-[#810100]/20 rounded-full blur-[160px] pointer-events-none" />
@@ -143,7 +143,7 @@ export default function TechSection() {
             </span>
           </h2>
 
-          <p className="font-sans text-slate-600 dark:text-slate-300 text-base font-light leading-relaxed">
+          <p className="font-sans text-[#c9c3b5] text-base font-light leading-relaxed">
             {text.intro}
           </p>
         </div>
@@ -153,7 +153,7 @@ export default function TechSection() {
           {techPillars.map((tech, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-2xl bg-[#EDEBDE] dark:bg-[#261e1c] border border-black/5 dark:border-white/10 hover:border-[#810100]/50 dark:hover:border-[#630102] transition-all duration-300 shadow-sm hover:shadow-xl group"
+              className="p-8 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 hover:border-[#810100]/50 dark:hover:border-[#630102] transition-all duration-300 shadow-sm hover:shadow-xl group"
             >
               <div className="p-3.5 rounded-xl bg-[#810100]/10 dark:bg-[#810100]/40 w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
                 {tech.icon}
@@ -163,11 +163,11 @@ export default function TechSection() {
                 {tech.subtitle}
               </span>
 
-              <h3 className="font-cinzel text-xl font-bold mb-3 text-slate-900 dark:text-white">
+              <h3 className="font-cinzel text-xl font-bold mb-3 text-[#EDEBDE]">
                 {tech.title}
               </h3>
 
-              <p className="font-sans text-xs text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+              <p className="font-sans text-xs text-[#c9c3b5] font-light leading-relaxed">
                 {tech.description}
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function TechSection() {
 
         {/* Technical Banner Callout */}
         <div
-          className="mt-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-[#810100] to-[#121a13] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+          className="mt-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-[#810100] to-[#1B1716] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
