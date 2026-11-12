@@ -1,6 +1,5 @@
 import {
   ArrowRight,
-  ChevronDown,
   Compass,
   ShieldCheck,
   Zap,
@@ -22,7 +21,6 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
         fleet: 'اكتشف الأسطول',
         electric: 'دفع كهربائي بجميع العجلات',
         warranty: 'ضمان بمواصفات مخصصة',
-        scroll: 'مرر لاكتشاف المزيد',
       }
     : {
         description:
@@ -31,7 +29,6 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
         fleet: 'Discover Fleet',
         electric: 'All-Wheel Electric Drive',
         warranty: 'Tailor Spec Warranty',
-        scroll: 'Scroll To Discover',
       };
 
   return (
@@ -112,14 +109,6 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="relative z-10 flex flex-col items-center justify-center pt-8 text-slate-400 dark:text-slate-500">
-        <span className="text-[10px] tracking-[0.3em] uppercase mb-2">
-          {text.scroll}
-        </span>
-
-        <ChevronDown className="w-4 h-4 animate-bounce text-[#810100] dark:text-[#b64b48]" />
-      </div>
     </section>
   );
 }
