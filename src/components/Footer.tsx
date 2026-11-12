@@ -116,7 +116,7 @@ export default function Footer() {
     <footer
       id="contact"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative w-full bg-[#040604] text-white pt-20 pb-12 px-6 md:px-16 border-t border-[#810100]/60 transition-colors duration-300"
+      className="relative w-full bg-[#1B1716] text-white pt-20 pb-12 px-6 md:px-16 border-t border-[#810100]/60 transition-colors duration-300"
     >
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#810100]/20 rounded-full blur-[140px] pointer-events-none" />
 
@@ -167,7 +167,7 @@ export default function Footer() {
 
             {subscribed ? (
               <div
-                className="p-4 rounded-xl bg-[#810100] border border-emerald-500/30 text-[#e3a09a] text-xs font-mono flex items-center gap-3"
+                className="p-4 rounded-xl bg-[#810100] border border-[#630102]/30 text-[#e3a09a] text-xs font-mono flex items-center gap-3"
                 dir={isArabic ? 'rtl' : 'ltr'}
               >
                 <Check className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -454,7 +454,7 @@ export default function Footer() {
               href="https://sevenmud-web-y0dt.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#810100]/60 hover:bg-[#810100] text-[#e3a09a] font-bold border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#810100]/60 hover:bg-[#810100] text-[#e3a09a] font-bold border border-[#630102]/20 hover:border-[#630102]/50 transition-all duration-300 hover:scale-105 shadow-sm"
               dir="ltr"
             >
               <span>7mud web</span>
