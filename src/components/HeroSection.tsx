@@ -37,7 +37,7 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen w-full flex flex-col justify-between pt-28 pb-12 px-6 md:px-16 overflow-hidden bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300"
+      className="relative min-h-screen w-full flex flex-col justify-between pt-28 pb-12 px-6 md:px-16 overflow-hidden bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300"
     >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -51,8 +51,8 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
       <div className="relative z-10 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center my-auto">
         {/* Hero Title */}
         <div className="space-y-4 max-w-5xl">
-          <h1 className="font-cinzel text-5xl sm:text-7xl lg:text-9xl font-extrabold tracking-tight leading-[0.9] text-slate-900 dark:text-white">
-            VELTRION <br />
+          <h1 className="font-cinzel text-5xl sm:text-7xl lg:text-9xl font-extrabold tracking-tight leading-[0.9] text-[#EDEBDE]">
+            COBRA <br />
             <span className="text-[#810100] dark:text-[#a20b0b] drop-shadow-sm">
               MOTORS
             </span>
@@ -61,7 +61,7 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
           <p
             dir={isArabic ? 'rtl' : 'ltr'}
          
-           className={`${isArabic ? 'font-arabic' : 'font-sans'} text-lg sm:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl font-light leading-relaxed pt-2`}
+           className={`${isArabic ? 'font-arabic' : 'font-sans'} text-lg sm:text-2xl text-[#c9c3b5] max-w-2xl font-light leading-relaxed pt-2`}
             >
             {text.description}
           </p>
@@ -87,7 +87,7 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
                 const el = document.getElementById('cars');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-8 py-4 bg-transparent hover:bg-black/5 dark:hover:bg-[#EDEBDE]/5 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium text-sm tracking-widest uppercase rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+              className="px-8 py-4 bg-transparent hover:bg-black/5 dark:hover:bg-[#EDEBDE]/5 border border-slate-300 dark:border-slate-700 text-[#EDEBDE] font-medium text-sm tracking-widest uppercase rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <Compass className="w-4 h-4" />
               <span>{text.fleet}</span>
