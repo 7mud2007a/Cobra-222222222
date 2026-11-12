@@ -166,7 +166,7 @@ export default function CinematicExperience() {
       ctx.arc(0, 0, wheelRadius, 0, Math.PI * 2);
       ctx.fillStyle = '#111';
       ctx.fill();
-      ctx.strokeStyle = '#223023';
+      ctx.strokeStyle = '#810100';
       ctx.lineWidth = 6;
       ctx.stroke();
 
@@ -191,7 +191,7 @@ export default function CinematicExperience() {
       // Hub Cap
       ctx.beginPath();
       ctx.arc(0, 0, 12, 0, Math.PI * 2);
-      ctx.fillStyle = '#223023';
+      ctx.fillStyle = '#810100';
       ctx.fill();
       ctx.restore();
     };
@@ -230,7 +230,7 @@ export default function CinematicExperience() {
       // Body Gradient Fill for Complete Vehicle
       if (progress >= 0.7) {
         const bodyGrad = ctx.createLinearGradient(0, horizon - 120, 0, horizon + 20);
-        bodyGrad.addColorStop(0, '#223023');
+        bodyGrad.addColorStop(0, '#810100');
         bodyGrad.addColorStop(0.5, '#121c13');
         bodyGrad.addColorStop(1, '#080c09');
         ctx.fillStyle = bodyGrad;
@@ -281,7 +281,7 @@ export default function CinematicExperience() {
     <section
       id="cinematic-experience"
       ref={containerRef}
-      className="relative w-full h-[500vh] bg-[#070b08] text-white"
+      className="relative w-full h-[500vh] bg-[#1B1716] text-white"
     >
       {/* Sticky Viewport Container */}
       <div className="sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-between items-center p-6 md:p-12">
@@ -299,7 +299,7 @@ export default function CinematicExperience() {
         {/* Top Header Tagline & Progress Indicator */}
         <div className="relative z-10 w-full max-w-7xl flex items-center justify-between pointer-events-none">
           <div className="flex items-center space-x-3 bg-black/60 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-[#88b08a]" />
+            <Sparkles className="w-4 h-4 text-[#b64b48]" />
             <span className="text-xs font-mono tracking-widest text-slate-300 uppercase">
               BMW M5 CS TRANSFORM SEQUENCE
             </span>
@@ -307,10 +307,10 @@ export default function CinematicExperience() {
 
           {/* Progress Bar */}
           <div className="flex items-center space-x-4 bg-black/60 border border-white/10 px-5 py-2 rounded-full backdrop-blur-md">
-            <Layers className="w-4 h-4 text-[#88b08a]" />
-            <div className="w-28 h-1.5 bg-white/20 rounded-full overflow-hidden">
+            <Layers className="w-4 h-4 text-[#b64b48]" />
+            <div className="w-28 h-1.5 bg-[#EDEBDE]/20 rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#223023] dark:bg-[#769d78] transition-all duration-150 ease-out"
+                className="h-full bg-[#810100] dark:bg-[#b64b48] transition-all duration-150 ease-out"
                 style={{ width: `${Math.round(progress * 100)}%` }}
               />
             </div>
@@ -324,7 +324,7 @@ export default function CinematicExperience() {
         <div className="relative z-10 w-full max-w-5xl mx-auto my-auto pointer-events-none min-h-[160px] flex items-center justify-center text-center">
           {activeText ? (
             <div className="space-y-4 animate-fade-in transition-all duration-500 transform translate-y-0">
-              <span className="inline-block px-3 py-1 rounded bg-[#223023]/80 border border-white/20 text-[10px] font-mono tracking-[0.3em] text-emerald-300 uppercase">
+              <span className="inline-block px-3 py-1 rounded bg-[#810100]/80 border border-white/20 text-[10px] font-mono tracking-[0.3em] text-[#e3a09a] uppercase">
                 {activeText.stageName}
               </span>
               <h2 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
@@ -346,7 +346,7 @@ export default function CinematicExperience() {
           <div className="hidden sm:block">
             FRAME SEQUENCE READY: <span className="text-emerald-400">/frames/frame001.png</span>
           </div>
-          <div className="animate-pulse text-[#88b08a] ml-auto">
+          <div className="animate-pulse text-[#b64b48] ml-auto">
             SCROLL CONTROL ➔
           </div>
         </div>
