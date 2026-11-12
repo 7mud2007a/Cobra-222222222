@@ -264,19 +264,19 @@ export default function CarsSection() {
     <section
       id="cars"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative py-28 px-6 md:px-16 w-full bg-white dark:bg-[#070b08] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
+      className="relative py-28 px-6 md:px-16 w-full bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
       {/* Section Header */}
       <div className="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
-          <span className="inline-block text-xs font-mono tracking-[0.3em] uppercase text-[#223023] dark:text-[#88b08a] mb-3">
+          <span className="inline-block text-xs font-mono tracking-[0.3em] uppercase text-[#810100] dark:text-[#b64b48] mb-3">
             {text.portfolio}
           </span>
 
           <h2 className="font-cinzel text-4xl sm:text-6xl font-extrabold tracking-tight">
             {isArabic ? (
               <>
-                <span className="text-[#223023] dark:text-[#5a805d]">
+                <span className="text-[#810100] dark:text-[#a20b0b]">
                   {text.veltrion}
                 </span>{' '}
                 {text.fleet}
@@ -284,7 +284,7 @@ export default function CarsSection() {
             ) : (
               <>
                 {text.fleet}{' '}
-                <span className="text-[#223023] dark:text-[#5a805d]">
+                <span className="text-[#810100] dark:text-[#a20b0b]">
                   {text.veltrion}
                 </span>{' '}
                 FLEET
@@ -298,14 +298,14 @@ export default function CarsSection() {
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-slate-100 dark:bg-[#0e1610] border border-black/5 dark:border-white/10 rounded-xl">
+        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#e4dfcf] dark:bg-[#261e1c] border border-black/5 dark:border-white/10 rounded-xl">
           {categories.map((cat) => (
             <button
               key={cat.value}
               onClick={() => setActiveCategory(cat.value)}
               className={`px-4 py-2 text-xs font-mono uppercase tracking-wider rounded-lg transition-all duration-300 ${
                 activeCategory === cat.value
-                  ? 'bg-[#223023] text-white shadow-md'
+                  ? 'bg-[#810100] text-white shadow-md'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -323,11 +323,11 @@ export default function CarsSection() {
           return (
             <div
               key={car.id}
-              className="group relative rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#0e1610] border border-black/10 dark:border-white/10 hover:border-[#223023]/60 dark:hover:border-[#3d563e] transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col justify-between"
+              className="group relative rounded-2xl overflow-hidden bg-[#f4f1e7] dark:bg-[#261e1c] border border-black/10 dark:border-white/10 hover:border-[#810100]/60 dark:hover:border-[#630102] transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col justify-between"
             >
               {/* Top Badge & Price */}
               <div className="p-6 md:p-8 flex items-center justify-between z-10">
-                <span className="px-3 py-1 rounded bg-[#223023] text-white text-[10px] font-mono tracking-widest uppercase">
+                <span className="px-3 py-1 rounded bg-[#810100] text-white text-[10px] font-mono tracking-widest uppercase">
                   {carText.badge}
                 </span>
 
@@ -348,7 +348,7 @@ export default function CarsSection() {
               {/* Car Name & Tagline */}
               <div className="p-6 md:p-8 pt-2 space-y-4">
                 <div>
-                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-slate-900 dark:text-white group-hover:text-[#223023] dark:group-hover:text-[#769d78] transition-colors">
+                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-slate-900 dark:text-white group-hover:text-[#810100] dark:group-hover:text-[#b64b48] transition-colors">
                     {car.name}
                   </h3>
 
@@ -359,7 +359,7 @@ export default function CarsSection() {
 
                 {/* Specs Grid */}
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-black/10 dark:border-white/10 text-center">
-                  <div className="p-2 rounded bg-white/50 dark:bg-black/20">
+                  <div className="p-2 rounded bg-[#EDEBDE]/50 dark:bg-black/20">
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.horsepower}
                     </span>
@@ -368,7 +368,7 @@ export default function CarsSection() {
                     </span>
                   </div>
 
-                  <div className="p-2 rounded bg-white/50 dark:bg-black/20">
+                  <div className="p-2 rounded bg-[#EDEBDE]/50 dark:bg-black/20">
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.acceleration}
                     </span>
@@ -377,7 +377,7 @@ export default function CarsSection() {
                     </span>
                   </div>
 
-                  <div className="p-2 rounded bg-white/50 dark:bg-black/20">
+                  <div className="p-2 rounded bg-[#EDEBDE]/50 dark:bg-black/20">
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.drivetrain}
                     </span>
@@ -391,7 +391,7 @@ export default function CarsSection() {
                 <div className="pt-2">
                   <button
                     onClick={() => setSelectedCar(car)}
-                    className="w-full py-3.5 px-4 bg-[#223023] hover:bg-[#2c3e2e] text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-lg"
+                    className="w-full py-3.5 px-4 bg-[#810100] hover:bg-[#a20b0b] text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-lg"
                   >
                     <span>{text.configure}</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -407,7 +407,7 @@ export default function CarsSection() {
       {selectedCar && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
           <div
-            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white dark:bg-[#0e1610] border border-black/20 dark:border-white/20 p-6 md:p-10 text-slate-900 dark:text-white shadow-2xl"
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#EDEBDE] dark:bg-[#261e1c] border border-black/20 dark:border-white/20 p-6 md:p-10 text-slate-900 dark:text-white shadow-2xl"
             dir={isArabic ? 'rtl' : 'ltr'}
           >
             {(() => {
@@ -418,13 +418,13 @@ export default function CarsSection() {
                   {/* Close Modal Button */}
                   <button
                     onClick={() => setSelectedCar(null)}
-                    className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 transition-colors"
+                    className="absolute top-6 right-6 p-2 rounded-full bg-[#e4dfcf] dark:bg-[#EDEBDE]/10 hover:bg-slate-200 dark:hover:bg-[#EDEBDE]/20 transition-colors"
                     aria-label={text.close}
                   >
                     <X className="w-5 h-5 text-slate-900 dark:text-white" />
                   </button>
 
-                  <span className="px-3 py-1 rounded bg-[#223023] text-white text-[10px] font-mono tracking-widest uppercase">
+                  <span className="px-3 py-1 rounded bg-[#810100] text-white text-[10px] font-mono tracking-widest uppercase">
                     {carText.badge}
                   </span>
 
@@ -436,7 +436,7 @@ export default function CarsSection() {
                     {carText.tagline}
                   </p>
 
-                  <div className="my-6 p-6 rounded-xl bg-slate-100 dark:bg-[#070b08] border border-black/5 dark:border-white/5">
+                  <div className="my-6 p-6 rounded-xl bg-[#e4dfcf] dark:bg-[#1B1716] border border-black/5 dark:border-white/5">
                     <p className="text-sm font-sans text-slate-700 dark:text-slate-300 leading-relaxed font-light">
                       {carText.description}
                     </p>
@@ -444,8 +444,8 @@ export default function CarsSection() {
 
                   {/* Spec Matrix Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
-                    <div className="p-4 rounded-lg bg-slate-50 dark:bg-white/5 border border-black/5 dark:border-white/5 text-center">
-                      <Gauge className="w-5 h-5 text-[#223023] dark:text-[#88b08a] mx-auto mb-1" />
+                    <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
+                      <Gauge className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.powerOutput}
@@ -456,8 +456,8 @@ export default function CarsSection() {
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-lg bg-slate-50 dark:bg-white/5 border border-black/5 dark:border-white/5 text-center">
-                      <Zap className="w-5 h-5 text-[#223023] dark:text-[#88b08a] mx-auto mb-1" />
+                    <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
+                      <Zap className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.acceleration}
@@ -468,8 +468,8 @@ export default function CarsSection() {
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-lg bg-slate-50 dark:bg-white/5 border border-black/5 dark:border-white/5 text-center">
-                      <SlidersHorizontal className="w-5 h-5 text-[#223023] dark:text-[#88b08a] mx-auto mb-1" />
+                    <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
+                      <SlidersHorizontal className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.topSpeed}
@@ -480,8 +480,8 @@ export default function CarsSection() {
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-lg bg-slate-50 dark:bg-white/5 border border-black/5 dark:border-white/5 text-center">
-                      <Shield className="w-5 h-5 text-[#223023] dark:text-[#88b08a] mx-auto mb-1" />
+                    <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
+                      <Shield className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.drivetrain}
@@ -505,7 +505,7 @@ export default function CarsSection() {
                           key={idx}
                           className="flex items-center space-x-2 text-xs font-sans text-slate-700 dark:text-slate-300"
                         >
-                          <ChevronRight className="w-3.5 h-3.5 text-[#223023] dark:text-[#88b08a]" />
+                          <ChevronRight className="w-3.5 h-3.5 text-[#810100] dark:text-[#b64b48]" />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -534,7 +534,7 @@ export default function CarsSection() {
                           el.scrollIntoView({ behavior: 'smooth' });
                         }
                       }}
-                      className="w-full sm:w-auto px-8 py-3.5 bg-[#223023] hover:bg-[#2c3e2e] text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all"
+                      className="w-full sm:w-auto px-8 py-3.5 bg-[#810100] hover:bg-[#a20b0b] text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all"
                     >
                       {text.reserve}
                     </button>
