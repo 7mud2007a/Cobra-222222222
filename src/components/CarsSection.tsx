@@ -195,7 +195,7 @@ export default function CarsSection() {
     ? {
         portfolio: '[ أسطول السيارات ]',
         fleet: 'أسطول',
-        veltrion: 'VELTRION',
+        COBRA: 'COBRA',
         description:
           'كل سيارة مصممة بدقة حرفية استثنائية، وهندسة متقدمة، وأداء لا مثيل له يجمع بين الفخامة والقوة.',
         all: 'الكل',
@@ -216,7 +216,7 @@ export default function CarsSection() {
     : {
         portfolio: '[ FLEET PORTFOLIO ]',
         fleet: 'THE',
-        veltrion: 'VELTRION',
+        COBRA: 'COBRA',
         description:
           'Each vehicle is crafted with bespoke artisan precision, high-density battery architectures, and unmatched hyper-electric power.',
         all: 'All',
@@ -264,7 +264,7 @@ export default function CarsSection() {
     <section
       id="cars"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative py-28 px-6 md:px-16 w-full bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
+      className="relative py-28 px-6 md:px-16 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
       {/* Section Header */}
       <div className="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
@@ -277,7 +277,7 @@ export default function CarsSection() {
             {isArabic ? (
               <>
                 <span className="text-[#810100] dark:text-[#a20b0b]">
-                  {text.veltrion}
+                  {text.COBRA}
                 </span>{' '}
                 {text.fleet}
               </>
@@ -285,20 +285,20 @@ export default function CarsSection() {
               <>
                 {text.fleet}{' '}
                 <span className="text-[#810100] dark:text-[#a20b0b]">
-                  {text.veltrion}
+                  {text.COBRA}
                 </span>{' '}
                 FLEET
               </>
             )}
           </h2>
 
-          <p className="font-sans text-slate-600 dark:text-slate-300 max-w-xl text-base mt-4 font-light">
+          <p className="font-sans text-[#c9c3b5] max-w-xl text-base mt-4 font-light">
             {text.description}
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#e4dfcf] dark:bg-[#261e1c] border border-black/5 dark:border-white/10 rounded-xl">
+        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#2A1B1A] border border-black/5 dark:border-white/10 rounded-xl">
           {categories.map((cat) => (
             <button
               key={cat.value}
@@ -306,7 +306,7 @@ export default function CarsSection() {
               className={`px-4 py-2 text-xs font-mono uppercase tracking-wider rounded-lg transition-all duration-300 ${
                 activeCategory === cat.value
                   ? 'bg-[#810100] text-white shadow-md'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  : 'text-[#b8afa0] hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               {cat.label}
@@ -323,7 +323,7 @@ export default function CarsSection() {
           return (
             <div
               key={car.id}
-              className="group relative rounded-2xl overflow-hidden bg-[#f4f1e7] dark:bg-[#261e1c] border border-black/10 dark:border-white/10 hover:border-[#810100]/60 dark:hover:border-[#630102] transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col justify-between"
+              className="group relative rounded-2xl overflow-hidden bg-[#261e1c] border border-black/10 dark:border-white/10 hover:border-[#810100]/60 dark:hover:border-[#630102] transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col justify-between"
             >
               {/* Top Badge & Price */}
               <div className="p-6 md:p-8 flex items-center justify-between z-10">
@@ -331,7 +331,7 @@ export default function CarsSection() {
                   {carText.badge}
                 </span>
 
-                <span className="font-cinzel font-bold text-lg text-slate-900 dark:text-white">
+                <span className="font-cinzel font-bold text-lg text-[#EDEBDE]">
                   {isArabic ? text.priceOnRequest : car.price}
                 </span>
               </div>
@@ -348,7 +348,7 @@ export default function CarsSection() {
               {/* Car Name & Tagline */}
               <div className="p-6 md:p-8 pt-2 space-y-4">
                 <div>
-                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-slate-900 dark:text-white group-hover:text-[#810100] dark:group-hover:text-[#b64b48] transition-colors">
+                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-[#EDEBDE] group-hover:text-[#810100] dark:group-hover:text-[#b64b48] transition-colors">
                     {car.name}
                   </h3>
 
@@ -363,7 +363,7 @@ export default function CarsSection() {
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.horsepower}
                     </span>
-                    <span className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+                    <span className="text-sm font-bold font-mono text-[#EDEBDE]">
                       {car.hp} HP
                     </span>
                   </div>
@@ -372,7 +372,7 @@ export default function CarsSection() {
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.acceleration}
                     </span>
-                    <span className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+                    <span className="text-sm font-bold font-mono text-[#EDEBDE]">
                       {car.acceleration}
                     </span>
                   </div>
@@ -381,7 +381,7 @@ export default function CarsSection() {
                     <span className="block text-[10px] font-mono text-slate-400 uppercase">
                       {text.drivetrain}
                     </span>
-                    <span className="text-sm font-bold font-mono text-slate-900 dark:text-white truncate block">
+                    <span className="text-sm font-bold font-mono text-[#EDEBDE] truncate block">
                       {car.drivetrain}
                     </span>
                   </div>
@@ -407,7 +407,7 @@ export default function CarsSection() {
       {selectedCar && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
           <div
-            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#EDEBDE] dark:bg-[#261e1c] border border-black/20 dark:border-white/20 p-6 md:p-10 text-slate-900 dark:text-white shadow-2xl"
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#261e1c] border border-black/20 dark:border-white/20 p-6 md:p-10 text-[#EDEBDE] shadow-2xl"
             dir={isArabic ? 'rtl' : 'ltr'}
           >
             {(() => {
@@ -421,7 +421,7 @@ export default function CarsSection() {
                     className="absolute top-6 right-6 p-2 rounded-full bg-[#e4dfcf] dark:bg-[#EDEBDE]/10 hover:bg-slate-200 dark:hover:bg-[#EDEBDE]/20 transition-colors"
                     aria-label={text.close}
                   >
-                    <X className="w-5 h-5 text-slate-900 dark:text-white" />
+                    <X className="w-5 h-5 text-[#EDEBDE]" />
                   </button>
 
                   <span className="px-3 py-1 rounded bg-[#810100] text-white text-[10px] font-mono tracking-widest uppercase">
