@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  ExternalLink,
   Mail,
   Phone,
   MapPin,
@@ -379,23 +378,6 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} COBRA MOTORS AG. {text.rights}
           </div>
 
-          <div className="flex items-center gap-2 group" dir={isArabic ? 'rtl' : 'ltr'}>
-            <span className="text-slate-400 font-light">
-              {text.craftedBy}
-            </span>
-
-            <a
-              href="https://sevenmud-web-y0dt.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#810100]/60 hover:bg-[#810100] text-[#e3a09a] font-bold border border-[#630102]/20 hover:border-[#630102]/50 transition-all duration-300 hover:scale-105 shadow-sm"
-              dir="ltr"
-            >
-              <span>7mud web</span>
-
-              <ExternalLink className="w-3 h-3 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
