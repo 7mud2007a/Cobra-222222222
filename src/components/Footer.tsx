@@ -116,9 +116,9 @@ export default function Footer() {
     <footer
       id="contact"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative w-full bg-[#040604] text-white pt-20 pb-12 px-6 md:px-16 border-t border-[#223023]/60 transition-colors duration-300"
+      className="relative w-full bg-[#040604] text-white pt-20 pb-12 px-6 md:px-16 border-t border-[#810100]/60 transition-colors duration-300"
     >
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#223023]/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#810100]/20 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10 items-start">
@@ -127,7 +127,7 @@ export default function Footer() {
               className="font-cinzel text-2xl md:text-3xl font-bold tracking-[0.25em] text-white"
               dir="ltr"
             >
-              VELTRION <span className="text-[#88b08a]">MOTORS</span>
+              VELTRION <span className="text-[#b64b48]">MOTORS</span>
             </h2>
 
             <p className="font-sans text-xs text-slate-400 font-light leading-relaxed max-w-md">
@@ -139,12 +139,12 @@ export default function Footer() {
               dir={isArabic ? 'rtl' : 'ltr'}
             >
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#88b08a] shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-[#b64b48] shrink-0" />
                 <span>{text.location}</span>
               </div>
 
               <div className="flex items-center gap-2" dir="ltr">
-                <Mail className="w-3.5 h-3.5 text-[#88b08a] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#b64b48] shrink-0" />
 
                 <a
                   href="mailto:bznsman77@gmail.com"
@@ -156,8 +156,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-[#0e1610] p-6 md:p-8 rounded-2xl border border-white/10 shadow-xl space-y-4">
-            <span className="text-[10px] font-mono tracking-widest text-[#88b08a] uppercase block">
+          <div className="lg:col-span-7 bg-[#261e1c] p-6 md:p-8 rounded-2xl border border-white/10 shadow-xl space-y-4">
+            <span className="text-[10px] font-mono tracking-widest text-[#b64b48] uppercase block">
               {text.privateAllocation}
             </span>
 
@@ -167,7 +167,7 @@ export default function Footer() {
 
             {subscribed ? (
               <div
-                className="p-4 rounded-xl bg-[#223023] border border-emerald-500/30 text-emerald-300 text-xs font-mono flex items-center gap-3"
+                className="p-4 rounded-xl bg-[#810100] border border-emerald-500/30 text-[#e3a09a] text-xs font-mono flex items-center gap-3"
                 dir={isArabic ? 'rtl' : 'ltr'}
               >
                 <Check className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -185,7 +185,7 @@ export default function Footer() {
                   required
                   placeholder={text.name}
                   dir={isArabic ? 'rtl' : 'ltr'}
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#223023] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors"
                 />
 
                 <input
@@ -196,7 +196,7 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   dir="ltr"
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#223023] transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors"
                 />
 
                 <input
@@ -210,7 +210,7 @@ export default function Footer() {
                   <button
                     type="button"
                     onClick={() => setCarOpen((open) => !open)}
-                    className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white focus:outline-none focus:border-[#223023] transition-all flex items-center justify-between gap-3"
+                    className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white focus:outline-none focus:border-[#810100] transition-all flex items-center justify-between gap-3"
                     aria-haspopup="listbox"
                     aria-expanded={carOpen}
                   >
@@ -223,7 +223,7 @@ export default function Footer() {
                     </span>
 
                     <ChevronDown
-                      className={`w-4 h-4 text-[#88b08a] transition-transform duration-300 shrink-0 ${
+                      className={`w-4 h-4 text-[#b64b48] transition-transform duration-300 shrink-0 ${
                         carOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -242,8 +242,8 @@ export default function Footer() {
                             }}
                             className={`w-full px-3 py-3 rounded-md text-xs transition-all duration-200 ${
                               selectedCar === car
-                                ? 'bg-[#223023] text-white'
-                                : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                                ? 'bg-[#810100] text-white'
+                                : 'text-slate-300 hover:bg-[#EDEBDE]/5 hover:text-white'
                             }`}
                             dir="ltr"
                           >
@@ -261,13 +261,13 @@ export default function Footer() {
                   placeholder={text.message}
                   rows={4}
                   dir={isArabic ? 'rtl' : 'ltr'}
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#223023] transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors resize-none"
                 />
 
                 <button
                   type="submit"
                   disabled={!selectedCar}
-                  className="px-6 py-3 bg-[#223023] hover:bg-[#2c3e2e] disabled:opacity-40 disabled:cursor-not-allowed text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-md"
+                  className="px-6 py-3 bg-[#810100] hover:bg-[#a20b0b] disabled:opacity-40 disabled:cursor-not-allowed text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-md"
                 >
                   <span>{text.submit}</span>
                   <ArrowRight
@@ -291,7 +291,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#cars"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                   dir="ltr"
                 >
                   Mercedes-AMG S 63 E PERFORMANCE
@@ -301,7 +301,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#cars"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                   dir="ltr"
                 >
                   BMW M4 CSL
@@ -311,7 +311,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#cars"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                   dir="ltr"
                 >
                   Toyota Supra MK4 Turbo
@@ -321,7 +321,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#cars"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                   dir="ltr"
                 >
                   Nissan GT-R R35
@@ -339,7 +339,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {isArabic ? 'منظومة الدفع الكمومية' : 'Quantum Powertrain'}
                 </a>
@@ -348,7 +348,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.activeAerodynamics}
                 </a>
@@ -357,7 +357,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.neuralCockpit}
                 </a>
@@ -366,7 +366,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.laserMatrix}
                 </a>
@@ -383,7 +383,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.provingGrounds}
                 </a>
@@ -392,7 +392,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.customization}
                 </a>
@@ -401,7 +401,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.sustainability}
                 </a>
@@ -410,7 +410,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#88b08a] transition-colors"
+                  className="hover:text-[#b64b48] transition-colors"
                 >
                   {text.chronology}
                 </a>
@@ -425,7 +425,7 @@ export default function Footer() {
 
             <ul className="space-y-2.5 text-slate-300">
               <li className="flex items-center gap-2" dir="ltr">
-                <Phone className="w-3 h-3 text-[#88b08a] shrink-0" />
+                <Phone className="w-3 h-3 text-[#b64b48] shrink-0" />
                 <span>+41 22 819 0000</span>
               </li>
 
@@ -454,7 +454,7 @@ export default function Footer() {
               href="https://sevenmud-web-y0dt.onrender.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#223023]/60 hover:bg-[#223023] text-emerald-300 font-bold border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#810100]/60 hover:bg-[#810100] text-[#e3a09a] font-bold border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 shadow-sm"
               dir="ltr"
             >
               <span>7mud web</span>
