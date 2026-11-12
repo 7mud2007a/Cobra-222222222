@@ -22,10 +22,11 @@ export default function Footer() {
     },
   ]);
   const [draft, setDraft] = useState('');
-  const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const chat = chatContainerRef.current;
+    if (chat) chat.scrollTo({ top: chat.scrollHeight, behavior: 'smooth' });
   }, [messages]);
 
   const getDemoReply = (question: string) => {
@@ -180,7 +181,7 @@ export default function Footer() {
             </div>
 
             <div className="p-4 md:p-6">
-              <div className="h-[290px] overflow-y-auto space-y-3 pr-1" aria-live="polite">
+              <div ref={chatContainerRef} className="h-[290px] overflow-y-auto space-y-3 pr-1" aria-live="polite">
                 {messages.map((message, index) => (
                   <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div dir={isArabic ? 'rtl' : 'ltr'} className={`max-w-[88%] rounded-2xl px-4 py-3 text-xs leading-6 whitespace-pre-line ${message.role === 'user' ? 'bg-[#630102] text-[#EDEBDE] rounded-br-sm' : 'bg-[#EDEBDE] text-[#1B1716] rounded-bl-sm'}`}>
@@ -188,7 +189,6 @@ export default function Footer() {
                     </div>
                   </div>
                 ))}
-                <div ref={chatEndRef} />
               </div>
 
               <div className="flex flex-wrap gap-2 mt-4 mb-4">
