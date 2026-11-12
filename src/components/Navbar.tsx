@@ -244,7 +244,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
         .anim-nav-container button.btn .icons svg,
         .anim-nav-container button.btn .icons svg path {
-          fill: #1B1716 !important;
+          fill: #630102 !important;
         }
 
         .anim-nav-container button.btn .icons svg {
