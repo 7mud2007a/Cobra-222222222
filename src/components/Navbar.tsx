@@ -371,7 +371,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
       <div className="anim-nav-container relative w-full max-w-full h-full box-border">
         <div
-          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#1B1716]/90 border-b border-white/5 transition-colors duration-300 w-full max-w-full box-border"
+          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#630102]/95 border-b border-[#EDEBDE]/15 transition-colors duration-300 w-full max-w-full box-border"
           dir="ltr"
         >
           <div className="w-12 sm:w-16 md:w-20 flex-shrink-0"></div>
