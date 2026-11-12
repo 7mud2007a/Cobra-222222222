@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        COBRA: {
+        cobra: {
           DEFAULT: '#810100',
           cherry: '#810100',
           maroon: '#630102',
@@ -33,8 +33,8 @@ export default {
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       boxShadow: {
-        'COBRA-glow': '0 0 25px rgba(129, 1, 0, 0.35)',
-        'COBRA-card': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
+        'cobra-glow': '0 0 25px rgba(129, 1, 0, 0.35)',
+        'cobra-card': '0 20px 40px -15px rgba(0, 0, 0, 0.5)',
       },
     },
   },
