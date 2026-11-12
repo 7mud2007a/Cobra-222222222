@@ -1,44 +1,91 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ExternalLink,
-  ArrowRight,
-  Check,
   Mail,
   Phone,
   MapPin,
-  ChevronDown,
+  Bot,
+  Send,
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { CARS_FLEET } from './CarsSection';
+
+type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
 export default function Footer() {
-  const [subscribed, setSubscribed] = useState(false);
-  const [email, setEmail] = useState('');
-  const [selectedCar, setSelectedCar] = useState('');
-  const [carOpen, setCarOpen] = useState(false);
-
   const { isArabic } = useLanguage();
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      role: 'assistant',
+      content: isArabic
+        ? 'أهلاً بك في COBRA MOTORS! أنا مساعدك التجريبي. اسألني عن السيارات أو المواصفات أو طرق التواصل أو أقسام الموقع.'
+        : 'Welcome to COBRA MOTORS! I am your demo assistant. Ask me about our cars, specifications, contact details, or website sections.',
+    },
+  ]);
+  const [draft, setDraft] = useState('');
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
-  const cars = [
-    'Mercedes-AMG S 63 E PERFORMANCE',
-    'BMW M4 CSL',
-    'Toyota Supra MK4 Turbo',
-    'Nissan GT-R R35',
-  ];
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const getDemoReply = (question: string) => {
+    const q = question.toLowerCase();
+    const asksCars = /car|cars|vehicle|vehicles|fleet|سيار|مركب|الأسطول|الاسطول/.test(q);
+    const asksContact = /contact|phone|number|email|call|تواصل|اتصال|رقم|هاتف|بريد|ايميل|إيميل/.test(q);
+    const asksLocation = /where|location|address|وين|أين|موقعكم|عنوان/.test(q);
+    const asksSpecs = /spec|horse|hp|power|speed|acceleration|مواصف|حصان|قوة|سرعة|تسارع/.test(q);
+    const asksAbout = /about|cobra|who are|من أنتم|عن الشركة|كوبرا/.test(q);
+    const asksNavigation = /navigate|section|find|how|وين بلاقي|أجد|ألاقي|قسم|الموقع/.test(q);
+
+    if (asksContact) {
+      return isArabic
+        ? 'يمكنك التواصل معنا عبر البريد الإلكتروني: bznsman77@gmail.com أو الهاتف: +41 22 819 0000. ستجد هذه المعلومات أيضاً في قسم «تواصل معنا» أسفل الموقع.'
+        : 'You can reach us by email at bznsman77@gmail.com or by phone at +41 22 819 0000. These details are listed in the Contact section at the bottom of the website.';
+    }
+    if (asksLocation) {
+      return isArabic
+        ? 'الموقع يذكر جنيف، سويسرا كموقع لـ COBRA MOTORS.'
+        : 'The website lists Geneva, Switzerland as the location of COBRA MOTORS.';
+    }
+    if (asksCars || asksSpecs) {
+      const fleet = CARS_FLEET.map((car) =>
+        '• ' + car.name + ' — ' + car.hp + ' HP, 0–60: ' + car.acceleration + ', top speed: ' + car.topSpeed + '. ' + (isArabic ? 'السعر عند الطلب' : car.price) + '.'
+      ).join('\n');
+      return isArabic
+        ? 'السيارات المعروضة حالياً في أسطولنا (مع المواصفات المنشورة):\n' + fleet + '\nاضغط على «السيارات» أو زر المواصفات داخل بطاقة السيارة للتفاصيل الكاملة.'
+        : 'The vehicles currently listed in our fleet (with published specifications):\n' + fleet + '\nOpen the Cars section and select a vehicle to view its full details.';
+    }
+    if (asksAbout) {
+      return isArabic
+        ? 'COBRA MOTORS موقع لاستعراض مجموعة سيارات عالية الأداء والفخامة. يمكنك تصفح الأسطول وفتح بطاقة أي سيارة لمشاهدة مواصفاتها وتجهيزاتها.'
+        : 'COBRA MOTORS showcases a collection of luxury and high-performance vehicles. Browse the fleet and open any vehicle card to explore its specifications and features.';
+    }
+    if (asksNavigation) {
+      return isArabic
+        ? 'تقدر تستخدم شريط التنقل للوصول إلى الأقسام: الرئيسية، السيارات، التكنولوجيا، من نحن، والتواصل. اضغط «السيارات» لمشاهدة الأسطول والمواصفات.'
+        : 'Use the navigation bar to explore Home, Cars, Technology, About, and Contact. Open the Cars section to browse the fleet and specifications.';
+    }
+    return isArabic
+      ? 'أنا حالياً نسخة تجريبية بإجابات محددة من معلومات الموقع، ولست متصلاً بخدمة ذكاء اصطناعي خارجية. أقدر أساعدك بالسيارات ومواصفاتها وأرقام التواصل وأقسام الموقع. جرّب تسألني: «ما هي سياراتكم؟»'
+      : 'I am currently a demo assistant with predefined answers from the website, not connected to an external AI service. I can help with cars, specifications, contact details, and website sections. Try asking: “What cars do you have?”';
+  };
+
+  const sendMessage = (value: string) => {
+    const question = value.trim();
+    if (!question) return;
+    setMessages((current) => [
+      ...current,
+      { role: 'user', content: question },
+      { role: 'assistant', content: getDemoReply(question) },
+    ]);
+    setDraft('');
+  };
 
   const text = isArabic
     ? {
-        description:
-          'قمة الفخامة في عالم السيارات الخارقة الكهربائية. صُممت في جنيف، وهُندست لتدوم إلى الأبد.',
+        description: 'قمة الفخامة في عالم السيارات. صُممت في جنيف، وهُندست لتدوم إلى الأبد.',
         location: 'جنيف، سويسرا',
-        privateAllocation: '[ تخصيص الكونسيرج الخاص ]',
-        privateViewing: 'طلب معاينة خاصة',
-        name: 'أدخل اسمك',
-        email: 'أدخل عنوان بريدك الإلكتروني',
-        selectVehicle: 'اختر سيارة',
-        message: 'أخبرنا عن طلب المعاينة الخاصة بك...',
-        submit: 'إرسال الاستفسار',
-        success:
-          'تم استلام طلبك. سيتواصل معك مشغلنا في جنيف قريبًا.',
         fleetModels: 'طرازات الأسطول',
         technology: 'التكنولوجيا',
         atelier: 'المشغل',
@@ -56,18 +103,8 @@ export default function Footer() {
         craftedBy: 'تصميم وتطوير',
       }
     : {
-        description:
-          'The pinnacle of hyper-electric automotive luxury. Designed in Geneva, engineered for eternity.',
+        description: 'The pinnacle of luxury and performance automotive. Designed in Geneva, engineered for eternity.',
         location: 'Geneva, Switzerland',
-        privateAllocation: '[ PRIVATE CONCIERGE ALLOCATION ]',
-        privateViewing: 'Request Private Viewing',
-        name: 'Enter your name',
-        email: 'Enter your email address',
-        selectVehicle: 'Select a vehicle',
-        message: 'Tell us about your private viewing request...',
-        submit: 'Submit Inquiry',
-        success:
-          'Your request has been received. Our Geneva Atelier will contact you shortly.',
         fleetModels: 'FLEET MODELS',
         technology: 'TECHNOLOGY',
         atelier: 'ATELIER',
@@ -84,33 +121,6 @@ export default function Footer() {
         rights: 'All Rights Reserved.',
         craftedBy: 'Crafted by',
       };
-
-  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch('https://formspree.io/f/mljdvpbe', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
-
-      if (response.ok) {
-        setSubscribed(true);
-        form.reset();
-        setEmail('');
-        setSelectedCar('');
-        setCarOpen(false);
-      }
-    } catch (error) {
-      console.error('Form submission failed:', error);
-    }
-  };
 
   return (
     <footer
@@ -156,128 +166,52 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-[#261e1c] p-6 md:p-8 rounded-2xl border border-white/10 shadow-xl space-y-4">
-            <span className="text-[10px] font-mono tracking-widest text-[#b64b48] uppercase block">
-              {text.privateAllocation}
-            </span>
-
-            <h3 className="font-cinzel text-xl font-bold">
-              {text.privateViewing}
-            </h3>
-
-            {subscribed ? (
-              <div
-                className="p-4 rounded-xl bg-[#810100] border border-[#630102]/30 text-[#e3a09a] text-xs font-mono flex items-center gap-3"
-                dir={isArabic ? 'rtl' : 'ltr'}
-              >
-                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-
-                <span>{text.success}</span>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubscribe}
-                className="flex flex-col gap-3"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder={text.name}
-                  dir={isArabic ? 'rtl' : 'ltr'}
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors"
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder={text.email}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  dir="ltr"
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors"
-                />
-
-                <input
-                  type="hidden"
-                  name="car"
-                  value={selectedCar}
-                />
-
-                {/* Custom Vehicle Dropdown */}
-                <div className="relative">
-                  <button
-                    type="button"
-                    onClick={() => setCarOpen((open) => !open)}
-                    className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white focus:outline-none focus:border-[#810100] transition-all flex items-center justify-between gap-3"
-                    aria-haspopup="listbox"
-                    aria-expanded={carOpen}
-                  >
-                    <span
-                      className={
-                        selectedCar ? 'text-white' : 'text-slate-500'
-                      }
-                    >
-                      {selectedCar || text.selectVehicle}
-                    </span>
-
-                    <ChevronDown
-                      className={`w-4 h-4 text-[#b64b48] transition-transform duration-300 shrink-0 ${
-                        carOpen ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-
-                  {carOpen && (
-                    <div className="absolute left-0 right-0 bottom-full mb-2 z-50 overflow-hidden rounded-lg border border-white/10 bg-[#0b100c] shadow-2xl shadow-black/50 backdrop-blur-xl">
-                      <div className="p-1.5">
-                        {cars.map((car) => (
-                          <button
-                            key={car}
-                            type="button"
-                            onClick={() => {
-                              setSelectedCar(car);
-                              setCarOpen(false);
-                            }}
-                            className={`w-full px-3 py-3 rounded-md text-xs transition-all duration-200 ${
-                              selectedCar === car
-                                ? 'bg-[#810100] text-white'
-                                : 'text-slate-300 hover:bg-[#EDEBDE]/5 hover:text-white'
-                            }`}
-                            dir="ltr"
-                          >
-                            {car}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+          <div className="lg:col-span-7 bg-[#261e1c] rounded-2xl border border-[#EDEBDE]/10 shadow-xl overflow-hidden">
+            <div className="px-5 py-4 md:px-6 bg-[#EDEBDE] text-[#1B1716] flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#630102] text-[#EDEBDE] flex items-center justify-center">
+                  <Bot className="w-5 h-5" />
                 </div>
+                <div>
+                  <h3 className="font-cinzel font-bold tracking-wide">COBRA AI</h3>
+                  <p className="text-[10px] font-mono text-[#630102]">{isArabic ? 'مساعدك داخل الموقع' : 'YOUR WEBSITE ASSISTANT'}</p>
+                </div>
+              </div>
+              <span className="text-[9px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border border-[#630102]/20 text-[#630102]">DEMO</span>
+            </div>
 
-                <textarea
-                  name="message"
-                  required
-                  placeholder={text.message}
-                  rows={4}
-                  dir={isArabic ? 'rtl' : 'ltr'}
-                  className="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#810100] transition-colors resize-none"
-                />
+            <div className="p-4 md:p-6">
+              <div className="h-[290px] overflow-y-auto space-y-3 pr-1" aria-live="polite">
+                {messages.map((message, index) => (
+                  <div key={index} className={\`flex \${message.role === 'user' ? 'justify-end' : 'justify-start'}\`}>
+                    <div dir={isArabic ? 'rtl' : 'ltr'} className={\`max-w-[88%] rounded-2xl px-4 py-3 text-xs leading-6 whitespace-pre-line \${message.role === 'user' ? 'bg-[#630102] text-[#EDEBDE] rounded-br-sm' : 'bg-[#EDEBDE] text-[#1B1716] rounded-bl-sm'}\`}>
+                      {message.content}
+                    </div>
+                  </div>
+                ))}
+                <div ref={chatEndRef} />
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={!selectedCar}
-                  className="px-6 py-3 bg-[#810100] hover:bg-[#a20b0b] disabled:opacity-40 disabled:cursor-not-allowed text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-md"
-                >
-                  <span>{text.submit}</span>
-                  <ArrowRight
-                    className={`w-3.5 h-3.5 ${
-                      isArabic ? 'rotate-180' : ''
-                    }`}
-                  />
+              <div className="flex flex-wrap gap-2 mt-4 mb-4">
+                {[
+                  { ar: 'ما هي سياراتكم؟', en: 'What cars do you have?' },
+                  { ar: 'كيف أتواصل معكم؟', en: 'How can I contact you?' },
+                  { ar: 'أين أجد المواصفات؟', en: 'Where are the specifications?' },
+                ].map((suggestion) => (
+                  <button key={suggestion.en} type="button" onClick={() => sendMessage(isArabic ? suggestion.ar : suggestion.en)} className="px-3 py-2 rounded-full border border-[#EDEBDE]/15 text-[10px] text-[#EDEBDE] hover:bg-[#630102] hover:border-[#630102] transition-colors">
+                    {isArabic ? suggestion.ar : suggestion.en}
+                  </button>
+                ))}
+              </div>
+
+              <form onSubmit={(event) => { event.preventDefault(); sendMessage(draft); }} className="flex items-center gap-2 p-2 rounded-xl bg-black/30 border border-[#EDEBDE]/15 focus-within:border-[#810100] transition-colors">
+                <input value={draft} onChange={(event) => setDraft(event.target.value)} dir={isArabic ? 'rtl' : 'ltr'} placeholder={isArabic ? 'اسأل COBRA AI عن السيارات أو الموقع...' : 'Ask COBRA AI about cars or the website...'} className="min-w-0 flex-1 bg-transparent px-2 py-2 text-xs text-[#EDEBDE] placeholder:text-slate-500 outline-none" aria-label={isArabic ? 'اكتب رسالتك' : 'Type your message'} />
+                <button type="submit" disabled={!draft.trim()} aria-label={isArabic ? 'إرسال' : 'Send'} className="w-10 h-10 shrink-0 rounded-lg bg-[#810100] text-[#EDEBDE] flex items-center justify-center hover:bg-[#9A1717] disabled:opacity-40 transition-colors">
+                  <Send className={\`w-4 h-4 \${isArabic ? 'rotate-180' : ''}\`} />
                 </button>
               </form>
-            )}
+              <p className="mt-3 text-[9px] text-slate-500 text-center">{isArabic ? 'نسخة تجريبية — الإجابات مبنية على معلومات الموقع الحالية' : 'Demo version — answers are based on current website content'}</p>
+            </div>
           </div>
         </div>
 
