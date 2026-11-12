@@ -56,7 +56,7 @@ export default function AboutSection() {
         automotive: 'هندسة السيارات',
         perfection: 'المثالية',
         description:
-          'في Veltrion Motors، نؤمن بأن الفخامة لا تُقاس بالمواد الفاخرة وحدها، بل بالأثر العاطفي الناتج عن الهندسة المتقنة. كل سيارة تغادر مشغلنا في جنيف هي تحفة فنية مخصصة من النحت الصناعي.',
+          'في COBRA MOTORS، نؤمن بأن الفخامة لا تُقاس بالمواد الفاخرة وحدها، بل بالأثر العاطفي الناتج عن الهندسة المتقنة. كل سيارة تغادر مشغلنا في جنيف هي تحفة فنية مخصصة من النحت الصناعي.',
         handcrafted: 'تجميع مصنوع يدويًا',
         allocations: 'تخصيصات مخصصة / سنويًا',
         chronology: '[ التسلسل الزمني ]',
@@ -68,7 +68,7 @@ export default function AboutSection() {
         automotive: 'AUTOMOTIVE',
         perfection: 'PERFECTION',
         description:
-          'At Veltrion Motors, we believe luxury is not merely defined by opulent materials, but by the emotional resonance of perfect engineering. Every vehicle that leaves our Geneva atelier is a bespoke work of industrial sculpture.',
+          'At COBRA MOTORS, we believe luxury is not merely defined by opulent materials, but by the emotional resonance of perfect engineering. Every vehicle that leaves our Geneva atelier is a bespoke work of industrial sculpture.',
         handcrafted: 'Hand-Crafted Assembly',
         allocations: 'Bespoke Allocations / Year',
         chronology: '[ CHRONOLOGY ]',
@@ -79,7 +79,7 @@ export default function AboutSection() {
     <section
       id="about"
       dir={isArabic ? 'rtl' : 'ltr'}
-      className="relative py-28 px-6 md:px-16 w-full bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-white transition-colors duration-300 border-t border-black/5 dark:border-white/5"
+      className="relative py-28 px-6 md:px-16 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Brand Philosophy Intro */}
@@ -110,7 +110,7 @@ export default function AboutSection() {
               )}
             </h2>
 
-            <p className="font-sans text-slate-600 dark:text-slate-300 text-base font-light leading-relaxed">
+            <p className="font-sans text-[#c9c3b5] text-base font-light leading-relaxed">
               {text.description}
             </p>
 
@@ -154,17 +154,17 @@ export default function AboutSection() {
             {milestones.map((m, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#f4f1e7] dark:bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#810100] transition-colors"
+                className="p-6 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#810100] transition-colors"
               >
                 <div className="text-4xl font-cinzel font-extrabold text-[#810100] dark:text-[#b64b48] mb-2">
                   {m.year}
                 </div>
 
-                <h4 className="font-cinzel text-base font-bold text-slate-900 dark:text-white mb-2">
+                <h4 className="font-cinzel text-base font-bold text-[#EDEBDE] mb-2">
                   {m.title}
                 </h4>
 
-                <p className="text-xs font-sans text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                <p className="text-xs font-sans text-[#b8afa0] font-light leading-relaxed">
                   {m.desc}
                 </p>
               </div>
