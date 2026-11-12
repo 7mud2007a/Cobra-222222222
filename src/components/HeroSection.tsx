@@ -4,6 +4,7 @@ import {
   ShieldCheck,
   Zap,
 } from 'lucide-react';
+import cobraLogo from '../assets/cobra-logo.png';
 import { useLanguage } from '../context/LanguageContext';
 
 interface HeroSectionProps {
@@ -46,20 +47,19 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center my-auto">
-        {/* Hero Title */}
-        <div className="space-y-4 max-w-5xl">
-          <h1 className="font-cinzel text-5xl sm:text-7xl lg:text-9xl font-extrabold tracking-tight leading-[0.9] text-[#EDEBDE]">
-            COBRA <br />
-            <span className="text-[#810100] dark:text-[#a20b0b] drop-shadow-sm">
-              MOTORS
-            </span>
-          </h1>
+        {/* Hero Brand Logo */}
+        <div className="space-y-6 max-w-5xl">
+          <h1 className="sr-only">COBRA MOTORS</h1>
+          <img
+            src={cobraLogo}
+            alt="COBRA MOTORS"
+            className="block w-full max-w-[560px] h-auto object-contain object-left"
+          />
 
           <p
             dir={isArabic ? 'rtl' : 'ltr'}
-         
-           className={`${isArabic ? 'font-arabic' : 'font-sans'} text-lg sm:text-2xl text-[#c9c3b5] max-w-2xl font-light leading-relaxed pt-2`}
-            >
+            className={`${isArabic ? 'font-arabic' : 'font-sans'} text-lg sm:text-2xl text-[#c9c3b5] max-w-2xl font-light leading-relaxed pt-2`}
+          >
             {text.description}
           </p>
         </div>
@@ -108,7 +108,6 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
