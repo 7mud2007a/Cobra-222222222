@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import porsche911GT3RS from '../assets/cars/147647342_1794335360339586.jpg';
-import bmwM4CSL from '../assets/cars/bmw_m4_csl.jpg';
+import mercedesAMGG63 from '../assets/cars/966433920_1794336494676749.jpg';
 import supraMK4 from '../assets/cars/Toyota_supra_mk4.jpg';
 import nissanGTR from '../assets/cars/nissan_gt-r_r35.jpg';
 import {
@@ -57,25 +57,27 @@ export const CARS_FLEET: CarModel[] = [
     ],
   },
   {
-    id: 'bmw-m4-csl',
-    name: 'BMW M4 CSL',
-    tagline: 'Lightweight M Performance',
-    category: 'Hypercar',
+    id: 'mercedes-amg-g63',
+    name: 'Mercedes-AMG G 63',
+    tagline: 'Iconic luxury meets uncompromising off-road performance',
+    category: 'Luxury SUV',
     price: 'PRICE ON REQUEST',
-    hp: 550,
-    acceleration: '3.7s',
-    topSpeed: '191 MPH',
-    range: 'RWD Track Spec',
-    drivetrain: 'Rear-Wheel Drive',
-    imagePlaceholder: bmwM4CSL,
-    badge: 'LIMITED',
+    hp: 585,
+    acceleration: '4.4s',
+    topSpeed: '137 MPH',
+    range: 'AMG Performance 4MATIC',
+    drivetrain: 'AMG Performance 4MATIC · AWD',
+    imagePlaceholder: mercedesAMGG63,
+    badge: 'LUXURY SUV',
     description:
-      'A track-honed masterpiece engineered with extreme lightweight carbon-fiber construction, a high-revving M TwinPower Turbo inline-6 engine, and uncompromised circuit aerodynamics.',
+      'The latest Mercedes-AMG G 63 combines the iconic G-Class design with a handcrafted 4.0-litre V8 biturbo mild-hybrid powertrain. It delivers 585 hp and 850 Nm through the AMG SPEEDSHIFT TCT 9G transmission and permanent AMG Performance 4MATIC all-wheel drive, backed by three selectable differential locks and advanced off-road capability.',
     features: [
-      'Carbon Fiber Reinforced Plastic Hood & Roof',
-      'M Carbon Full Bucket Seats',
-      'Track-Tuned M Precision Strut',
-      'Titanium Exhaust Silencer',
+      'Handcrafted 4.0L V8 biturbo engine with 48V mild-hybrid technology',
+      '585 hp and 850 Nm of torque',
+      'AMG SPEEDSHIFT TCT 9G automatic transmission',
+      'AMG Performance 4MATIC all-wheel drive',
+      'Three selectable differential locks and low-range off-road gearing',
+      '0–100 km/h in 4.4 seconds · 220 km/h top speed',
     ],
   },
   {
@@ -149,17 +151,19 @@ const CAR_TRANSLATIONS: Record<
       'تسارع 0–60 ميل/س خلال 3.0 ثوانٍ وسرعة قصوى 184 ميل/س',
     ],
   },
-  'bmw-m4-csl': {
-    tagline: 'أداء M خفيف الوزن',
-    category: 'هايبركار',
-    badge: 'محدودة',
+  'mercedes-amg-g63': {
+    tagline: 'فخامة G-Class الأسطورية مع قدرات أداء وطرق وعرة',
+    category: 'SUV فاخرة',
+    badge: 'SUV فاخرة',
     description:
-      'تحفة هندسية مهيأة للحلبات، صُممت بهيكل فائق الخفة من ألياف الكربون، ومحرك M TwinPower Turbo سداسي الأسطوانات عالي الدوران، وديناميكا هوائية مخصصة للأداء على الحلبة دون أي تنازلات.',
+      'تجمع Mercedes-AMG G 63 الحديثة بين تصميم G-Class الأيقوني ومحرك V8 مزدوج التيربو سعة 4.0 لتر مع نظام هجين خفيف 48 فولت. يولد المحرك 585 حصانًا و850 نيوتن متر، وينقل القوة عبر ناقل AMG SPEEDSHIFT TCT 9G ونظام الدفع الرباعي AMG Performance 4MATIC، مع ثلاثة أقفال تفاضلية قابلة للاختيار وتجهيزات متقدمة للقيادة على الطرق الوعرة.',
     features: [
-      'غطاء سقف وغطاء محرك من ألياف الكربون المقواة',
-      'مقاعد M Carbon الرياضية الكاملة',
-      'دعامة M Precision مضبوطة للحلبة',
-      'كاتم عادم من التيتانيوم',
+      'محرك V8 سعة 4.0 لتر مزدوج التيربو مع نظام هجين خفيف 48 فولت',
+      'قوة 585 حصانًا وعزم 850 نيوتن متر',
+      'ناقل حركة أوتوماتيكي AMG SPEEDSHIFT TCT 9G',
+      'نظام الدفع الرباعي AMG Performance 4MATIC',
+      'ثلاثة أقفال تفاضلية ونظام تعشيق منخفض للطرق الوعرة',
+      'تسارع 0–100 كم/س خلال 4.4 ثوانٍ · سرعة قصوى 220 كم/س',
     ],
   },
   'toyota-supra-mk4-turbo': {
@@ -205,6 +209,7 @@ export default function CarsSection() {
         all: 'الكل',
         hypercar: 'هايبركار',
         luxury: 'سيدان فاخرة',
+        luxurySUV: 'SUV فاخرة',
         horsepower: 'القوة',
         acceleration: '0-60 ميل/س',
         drivetrain: 'نظام الدفع',
@@ -226,6 +231,7 @@ export default function CarsSection() {
         all: 'All',
         hypercar: 'Hypercar',
         luxury: 'Luxury Saloon',
+        luxurySUV: 'Luxury SUV',
         horsepower: 'HORSEPOWER',
         acceleration: '0-60 MPH',
         drivetrain: 'DRIVETRAIN',
@@ -243,6 +249,7 @@ export default function CarsSection() {
     { value: 'All', label: text.all },
     { value: 'Hypercar', label: text.hypercar },
     { value: 'Luxury Saloon', label: text.luxury },
+    { value: 'Luxury SUV', label: text.luxurySUV },
   ];
 
   const filteredCars =
