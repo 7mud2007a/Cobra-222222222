@@ -440,7 +440,7 @@ export default function CarsSection() {
                   {/* Close Modal Button */}
                   <button
                     onClick={() => setSelectedCar(null)}
-                    className="absolute top-6 right-6 p-2 rounded-full bg-[#e4dfcf] dark:bg-[#EDEBDE]/10 hover:bg-slate-200 dark:hover:bg-[#EDEBDE]/20 transition-colors"
+                    className="absolute top-6 left-6 p-2 rounded-full bg-[#e4dfcf] dark:bg-[#EDEBDE]/10 hover:bg-slate-200 dark:hover:bg-[#EDEBDE]/20 transition-colors"
                     aria-label={text.close}
                   >
                     <X className="w-5 h-5 text-[#EDEBDE]" />
