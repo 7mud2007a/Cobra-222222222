@@ -371,30 +371,19 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
       <div className="anim-nav-container relative w-full max-w-full h-full box-border">
         <div
-          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#1B1716]/95 border-b border-[#EDEBDE]/15 transition-colors duration-300 w-full max-w-full box-border"
+          className="fixed top-0 left-0 right-0 h-24 px-3 sm:px-6 md:px-14 flex items-center justify-center z-40 pointer-events-none w-full max-w-full box-border"
           dir="ltr"
         >
-          <div className="w-12 sm:w-16 md:w-20 flex-shrink-0"></div>
-
           <div
-            className="flex items-center justify-center cursor-pointer min-w-0 px-1 overflow-hidden"
+            className="flex items-center justify-center cursor-pointer min-w-0 px-1 overflow-hidden pointer-events-auto"
             onClick={() => handleNavClick('hero')}
           >
-            <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-[#EDEBDE] transition-colors duration-300 whitespace-nowrap truncate">
+            <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-[#1B1716] transition-colors duration-300 whitespace-nowrap truncate">
               COBRA{' '}
               <span className="text-[#810100]">
                 MOTORS
               </span>
             </span>
-          </div>
-
-          <div className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
-            <button
-              onClick={() => handleNavClick('contact')}
-              className="hidden sm:block px-4 md:px-5 py-2 text-[10px] md:text-xs font-semibold tracking-widest text-white uppercase bg-[#810100] hover:bg-[#a20b0b] rounded-md transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
-            >
-              {labels.inquire}
-            </button>
           </div>
         </div>
 
