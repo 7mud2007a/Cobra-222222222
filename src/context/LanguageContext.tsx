@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, ReactNode } from 'react';
 
 type Language = 'EN' | 'AR';
 
@@ -11,33 +11,19 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('EN');
+  const language: Language = 'AR';
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('veltrion-language');
-
-    if (savedLanguage === 'AR' || savedLanguage === 'EN') {
-      setLanguage(savedLanguage);
-    }
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
   }, []);
-
-  useEffect(() => {
-    document.documentElement.dir = language === 'AR' ? 'rtl' : 'ltr';
-    document.documentElement.lang = language === 'AR' ? 'ar' : 'en';
-
-    localStorage.setItem('veltrion-language', language);
-  }, [language]);
-
-  const toggleLanguage = () => {
-    setLanguage((current) => (current === 'EN' ? 'AR' : 'EN'));
-  };
 
   return (
     <LanguageContext.Provider
       value={{
         language,
-        isArabic: language === 'AR',
-        toggleLanguage,
+        isArabic: true,
+        toggleLanguage: () => {},
       }}
     >
       {children}
@@ -53,4 +39,4 @@ export function useLanguage() {
   }
 
   return context;
-    }
+}
