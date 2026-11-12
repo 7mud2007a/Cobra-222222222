@@ -288,7 +288,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          background: #810100;
+          background: #EDEBDE;
           clip-path: circle(0px at 60px 60px);
           -webkit-clip-path: circle(0px at 60px 60px);
           z-index: 50;
@@ -337,7 +337,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           font-weight: 700;
           opacity: 0.35;
           transition: all 0.3s ease;
-          color: #ffffff;
+          color: #1B1716;
           letter-spacing: -0.02em;
           text-transform: uppercase;
         }
@@ -351,7 +351,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           width: 25px;
           height: 8px;
           border-radius: 10px;
-          background: #ffffff;
+          background: #810100;
           opacity: 0;
           transition: opacity 0.25s ease, transform 0.25s ease;
           pointer-events: none;
@@ -365,8 +365,8 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
         .anim-nav-container nav ul li:hover span {
           opacity: 1;
           letter-spacing: 0.02em;
-          color: #ffffff;
-          text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+          color: #630102;
+          text-shadow: 0 0 20px rgba(99, 1, 2, 0.18);
         }
       `,
         }}
