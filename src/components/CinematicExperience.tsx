@@ -18,7 +18,7 @@ const CINE_TEXTS = [
   {
     range: [0.52, 0.72],
     title: "Built With Uncompromising Detail",
-    subtitle: "BMW M5 CS inspired architecture fused with Veltrion quantum powertrain technology.",
+    subtitle: "BMW M5 CS inspired architecture fused with COBRA quantum powertrain technology.",
     stageName: "03 / X-RAY ENGINE VISUALIZATION"
   },
   {
