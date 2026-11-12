@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import mercedesS63 from '../assets/cars/Mercedes-benz_amg_s63.jpg';
+import porsche911GT3RS from '../assets/cars/147647342_1794335360339586.jpg';
 import bmwM4CSL from '../assets/cars/bmw_m4_csl.jpg';
 import supraMK4 from '../assets/cars/Toyota_supra_mk4.jpg';
 import nissanGTR from '../assets/cars/nissan_gt-r_r35.jpg';
@@ -33,25 +33,27 @@ export interface CarModel {
 
 export const CARS_FLEET: CarModel[] = [
   {
-    id: 'mercedes-amg-s-63-e-performance',
-    name: 'Mercedes-AMG S 63 E PERFORMANCE',
-    tagline: 'High-Performance Luxury Sedan',
-    category: 'Luxury Saloon',
+    id: 'porsche-911-gt3-rs',
+    name: 'PORSCHE 911 GT3 RS',
+    tagline: 'Track-focused naturally aspirated performance',
+    category: 'Hypercar',
     price: 'PRICE ON REQUEST',
-    hp: 791,
-    acceleration: '3.3s',
-    topSpeed: '180 MPH',
-    range: 'AMG 4MATIC+',
-    drivetrain: 'AMG Performance 4MATIC+',
-    imagePlaceholder: mercedesS63,
-    badge: 'FLAGSHIP',
+    hp: 518,
+    acceleration: '3.0s',
+    topSpeed: '184 MPH',
+    range: 'Rear-Wheel Drive',
+    drivetrain: '7-speed PDK · Rear-Wheel Drive',
+    imagePlaceholder: porsche911GT3RS,
+    badge: 'TRACK FOCUSED',
     description:
-      'The Mercedes-AMG S 63 E PERFORMANCE combines a handcrafted 4.0L V8 biturbo engine with an AMG-specific electric drive unit to deliver dominant power, first-class executive luxury, and high-performance hybrid engineering.',
+      'The 992-generation Porsche 911 GT3 RS is a road-legal, track-focused sports car powered by a naturally aspirated 4.0-litre flat-six boxer engine producing 518 hp. Its motorsport-derived aerodynamics, active DRS and seven-speed PDK transmission are engineered for exceptional circuit performance.',
     features: [
-      'Handcrafted 4.0L V8 Biturbo Hybrid',
-      'AMG ACTIVE RIDE CONTROL',
-      'Rear-Axle Steering',
-      'Bespoke Executive Lounge Cabin',
+      '4.0L naturally aspirated flat-six boxer engine',
+      '518 hp and 465 Nm of torque',
+      '7-speed Porsche Doppelkupplung (PDK)',
+      'Porsche Active Aerodynamics with DRS',
+      'Rear-wheel drive with Porsche Torque Vectoring Plus',
+      '0–60 mph in 3.0 seconds · 184 mph top speed',
     ],
   },
   {
@@ -132,17 +134,19 @@ const CAR_TRANSLATIONS: Record<
     features: string[];
   }
 > = {
-  'mercedes-amg-s-63-e-performance': {
-    tagline: 'سيدان فاخرة عالية الأداء',
-    category: 'سيدان فاخرة',
-    badge: 'الرائدة',
+  'porsche-911-gt3-rs': {
+    tagline: 'أداء حلبات بمحرك طبيعي السحب',
+    category: 'هايبركار',
+    badge: 'مخصصة للحلبات',
     description:
-      'تجمع Mercedes-AMG S 63 E PERFORMANCE بين محرك V8 بيتوربو سعة 4.0 لتر مصنوع يدويًا ووحدة دفع كهربائية مخصصة من AMG، لتقدم قوة هائلة وفخامة تنفيذية من الدرجة الأولى وهندسة هجينة عالية الأداء.',
+      'تأتي Porsche 911 GT3 RS من الجيل 992 بمحرك بوكسر سداسي الأسطوانات سعة 4.0 لتر بتنفس طبيعي يولد 518 حصانًا. تجمع بين الديناميكا الهوائية المستوحاة من رياضة السيارات ونظام DRS النشط وناقل الحركة PDK ذي السبع سرعات لتقديم أداء استثنائي على الحلبات مع اعتمادها للسير على الطرق.',
     features: [
-      'محرك V8 بيتوربو هجين مصنوع يدويًا سعة 4.0 لتر',
-      'نظام AMG ACTIVE RIDE CONTROL',
-      'توجيه المحور الخلفي',
-      'مقصورة Executive Lounge مخصصة',
+      'محرك بوكسر 6 أسطوانات سعة 4.0 لتر بتنفس طبيعي',
+      'قوة 518 حصانًا وعزم 465 نيوتن متر',
+      'ناقل حركة PDK مزدوج القابض بسبع سرعات',
+      'ديناميكا هوائية نشطة Porsche Active Aerodynamics مع DRS',
+      'دفع خلفي ونظام Porsche Torque Vectoring Plus',
+      'تسارع 0–60 ميل/س خلال 3.0 ثوانٍ وسرعة قصوى 184 ميل/س',
     ],
   },
   'bmw-m4-csl': {
