@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-[#070b08] text-slate-900 dark:text-slate-100 font-sans selection:bg-[#223023] selection:text-white transition-colors duration-300">
+      <div className="min-h-screen bg-[#EDEBDE] dark:bg-[#1B1716] text-slate-900 dark:text-slate-100 font-sans selection:bg-[#810100] selection:text-white transition-colors duration-300">
         <AnimatedNavbar onNavigate={handleNavigate} />
         <main>
           <HeroSection onExploreClick={() => handleNavigate('cars')} />
