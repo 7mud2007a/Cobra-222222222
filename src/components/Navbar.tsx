@@ -373,7 +373,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
       <div className="anim-nav-container relative w-full max-w-full h-full box-border">
         <div
-          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#EDEBDE]/30 dark:bg-[#1B1716]/30 border-b border-black/5 dark:border-white/5 transition-colors duration-300 w-full max-w-full box-border"
+          className="fixed top-0 left-0 right-0 h-16 sm:h-20 md:h-24 px-3 sm:px-6 md:px-14 flex items-center justify-between z-40 pointer-events-auto backdrop-blur-md bg-[#1B1716]/90 border-b border-black/5 dark:border-white/5 transition-colors duration-300 w-full max-w-full box-border"
           dir="ltr"
         >
           <div className="w-12 sm:w-16 md:w-20 flex-shrink-0"></div>
@@ -382,8 +382,8 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
             className="flex items-center justify-center cursor-pointer min-w-0 px-1 overflow-hidden"
             onClick={() => handleNavClick('hero')}
           >
-            <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-slate-900 dark:text-white transition-colors duration-300 whitespace-nowrap truncate">
-              VELTRION{' '}
+            <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-[#EDEBDE] transition-colors duration-300 whitespace-nowrap truncate">
+              COBRA{' '}
               <span className="text-[#810100] dark:text-[#a20b0b]">
                 MOTORS
               </span>
@@ -394,7 +394,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleLanguage}
-                className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
+                className="group flex items-center gap-1.5 px-2 py-1.5 sm:px-2.5 sm:py-2 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-black/10 dark:border-white/10"
                 title={
                   language === 'EN'
                     ? labels.switchToArabic
@@ -415,7 +415,7 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
 
               <button
                 onClick={toggleTheme}
-                className="p-1.5 sm:p-2.5 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-slate-900 dark:text-white transition-all duration-300 border border-black/10 dark:border-white/10"
+                className="p-1.5 sm:p-2.5 rounded-full bg-black/5 dark:bg-[#EDEBDE]/10 hover:bg-black/10 dark:hover:bg-[#EDEBDE]/20 text-[#EDEBDE] transition-all duration-300 border border-black/10 dark:border-white/10"
                 title={labels.toggleTheme}
                 aria-label={labels.toggleTheme}
               >
