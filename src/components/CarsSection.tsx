@@ -291,7 +291,7 @@ export default function CarsSection() {
       {/* Section Header */}
       <div className="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
-          <span className="inline-block text-xs font-mono tracking-[0.3em] uppercase text-[#810100] dark:text-[#b64b48] mb-3">
+          <span className="inline-block text-xs font-mono tracking-[0.3em] uppercase text-[#810100] dark:text-[#EDEBDE] mb-3">
             {text.portfolio}
           </span>
 
@@ -370,7 +370,7 @@ export default function CarsSection() {
               {/* Car Name & Tagline */}
               <div className="p-6 md:p-8 pt-2 space-y-4">
                 <div>
-                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-[#EDEBDE] group-hover:text-[#810100] dark:group-hover:text-[#b64b48] transition-colors">
+                  <h3 className="font-cinzel text-2xl md:text-3xl font-bold tracking-wide text-[#EDEBDE] group-hover:text-[#810100] dark:group-hover:text-[#EDEBDE] transition-colors">
                     {car.name}
                   </h3>
 
@@ -467,7 +467,7 @@ export default function CarsSection() {
                   {/* Spec Matrix Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
                     <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
-                      <Gauge className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
+                      <Gauge className="w-5 h-5 text-[#810100] dark:text-[#EDEBDE] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.powerOutput}
@@ -479,7 +479,7 @@ export default function CarsSection() {
                     </div>
 
                     <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
-                      <Zap className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
+                      <Zap className="w-5 h-5 text-[#810100] dark:text-[#EDEBDE] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.acceleration}
@@ -491,7 +491,7 @@ export default function CarsSection() {
                     </div>
 
                     <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
-                      <SlidersHorizontal className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
+                      <SlidersHorizontal className="w-5 h-5 text-[#810100] dark:text-[#EDEBDE] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.topSpeed}
@@ -503,7 +503,7 @@ export default function CarsSection() {
                     </div>
 
                     <div className="p-4 rounded-lg bg-[#f4f1e7] dark:bg-[#EDEBDE]/5 border border-black/5 dark:border-white/5 text-center">
-                      <Shield className="w-5 h-5 text-[#810100] dark:text-[#b64b48] mx-auto mb-1" />
+                      <Shield className="w-5 h-5 text-[#810100] dark:text-[#EDEBDE] mx-auto mb-1" />
 
                       <span className="block text-[10px] font-mono text-slate-400">
                         {text.drivetrain}
@@ -527,7 +527,7 @@ export default function CarsSection() {
                           key={idx}
                           className="flex items-center space-x-2 text-xs font-sans text-slate-700 dark:text-slate-300"
                         >
-                          <ChevronRight className="w-3.5 h-3.5 text-[#810100] dark:text-[#b64b48]" />
+                          <ChevronRight className="w-3.5 h-3.5 text-[#810100] dark:text-[#EDEBDE]" />
                           <span>{feat}</span>
                         </div>
                       ))}
