@@ -140,7 +140,7 @@ export default function Footer() {
               className="font-cinzel text-2xl md:text-3xl font-bold tracking-[0.25em] text-white"
               dir="ltr"
             >
-              COBRA <span className="text-[#b64b48]">MOTORS</span>
+              COBRA <span className="text-[#EDEBDE]">MOTORS</span>
             </h2>
 
             <p className="font-sans text-xs text-slate-400 font-light leading-relaxed max-w-md">
@@ -152,12 +152,12 @@ export default function Footer() {
               dir={isArabic ? 'rtl' : 'ltr'}
             >
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#b64b48] shrink-0" />
+                <MapPin className="w-3.5 h-3.5 text-[#EDEBDE] shrink-0" />
                 <span>{text.location}</span>
               </div>
 
               <div className="flex items-center gap-2" dir="ltr">
-                <Mail className="w-3.5 h-3.5 text-[#b64b48] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#EDEBDE] shrink-0" />
 
                 <a
                   href="mailto:bznsman77@gmail.com"
@@ -228,7 +228,7 @@ export default function Footer() {
                 <li key={car.id}>
                   <a
                     href="#cars"
-                    className="hover:text-[#b64b48] transition-colors"
+                    className="hover:text-[#EDEBDE] transition-colors"
                     dir="ltr"
                   >
                     {car.name}
@@ -247,7 +247,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {isArabic ? 'منظومة الدفع الكمومية' : 'Quantum Powertrain'}
                 </a>
@@ -256,7 +256,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.activeAerodynamics}
                 </a>
@@ -265,7 +265,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.neuralCockpit}
                 </a>
@@ -274,7 +274,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#technology"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.laserMatrix}
                 </a>
@@ -291,7 +291,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.provingGrounds}
                 </a>
@@ -300,7 +300,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.customization}
                 </a>
@@ -309,7 +309,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.sustainability}
                 </a>
@@ -318,7 +318,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#b64b48] transition-colors"
+                  className="hover:text-[#EDEBDE] transition-colors"
                 >
                   {text.chronology}
                 </a>
@@ -333,7 +333,7 @@ export default function Footer() {
 
             <ul className="space-y-2.5 text-slate-300">
               <li className="flex items-center gap-2" dir="ltr">
-                <Phone className="w-3 h-3 text-[#b64b48] shrink-0" />
+                <Phone className="w-3 h-3 text-[#EDEBDE] shrink-0" />
                 <span>+963 935 110 004</span>
               </li>
 
