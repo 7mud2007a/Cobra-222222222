@@ -88,7 +88,7 @@ export default function AboutSection() {
                 <>
                   {text.art}
                   <br />
-                  <span className="text-[#810100] dark:text-[#a20b0b]">
+                  <span className="text-[#EDEBDE] dark:text-[#EDEBDE]">
                     {text.automotive}
                   </span>{' '}
                   {text.perfection}
@@ -96,7 +96,7 @@ export default function AboutSection() {
               ) : (
                 <>
                   {text.art} <br />
-                  <span className="text-[#810100] dark:text-[#a20b0b]">
+                  <span className="text-[#EDEBDE] dark:text-[#EDEBDE]">
                     {text.automotive}
                   </span>{' '}
                   {text.perfection}
@@ -110,7 +110,7 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-black/10 dark:border-white/10">
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#810100]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#EDEBDE] dark:text-[#EDEBDE]">
                   100%
                 </span>
 
@@ -120,7 +120,7 @@ export default function AboutSection() {
               </div>
 
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#810100]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#EDEBDE] dark:text-[#EDEBDE]">
                   25
                 </span>
 
@@ -135,7 +135,7 @@ export default function AboutSection() {
         {/* Brand Timeline Milestones */}
         <div>
           <div className="text-center mb-12">
-            <span className="text-xs font-mono text-[#810100] dark:text-[#810100] uppercase tracking-widest block mb-2">
+            <span className="text-xs font-mono text-[#EDEBDE] dark:text-[#EDEBDE] uppercase tracking-widest block mb-2">
               {text.chronology}
             </span>
 
@@ -148,9 +148,9 @@ export default function AboutSection() {
             {milestones.map((m, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#810100] transition-colors"
+                className="p-6 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#EDEBDE] transition-colors"
               >
-                <div className="text-4xl font-cinzel font-extrabold text-[#810100] dark:text-[#810100] mb-2">
+                <div className="text-4xl font-cinzel font-extrabold text-[#EDEBDE] dark:text-[#EDEBDE] mb-2">
                   {m.year}
                 </div>
 
