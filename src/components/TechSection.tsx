@@ -176,11 +176,11 @@ export default function TechSection() {
 
         {/* Technical Banner Callout */}
         <div
-          className="mt-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-[#261E1C] to-[#1B1716] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+          className="mt-16 p-8 md:p-12 rounded-2xl bg-[#B8AFA0] text-[#1B1716] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
-            <span className="text-xs font-mono text-[#e3a09a] uppercase tracking-widest block">
+            <span className="text-xs font-mono text-[#1B1716] uppercase tracking-widest block">
               {text.academy}
             </span>
 
@@ -188,7 +188,7 @@ export default function TechSection() {
               {text.academyTitle}
             </h3>
 
-            <p className="text-xs text-slate-300 font-light leading-relaxed">
+            <p className="text-xs text-[#302927] font-light leading-relaxed">
               {text.academyDescription}
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function TechSection() {
                 el.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="px-8 py-4 bg-[#EDEBDE] text-[#810100] hover:bg-[#e4dfcf] font-mono text-xs uppercase tracking-widest rounded-lg font-bold transition-all shadow-lg whitespace-nowrap"
+            className="px-8 py-4 bg-[#1B1716] text-[#EDEBDE] hover:bg-[#302927] font-mono text-xs uppercase tracking-widest rounded-lg font-bold transition-all shadow-lg whitespace-nowrap"
           >
             {text.briefing}
           </button>
