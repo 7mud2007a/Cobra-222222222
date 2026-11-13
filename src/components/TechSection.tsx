@@ -155,7 +155,7 @@ export default function TechSection() {
               key={idx}
               className="p-8 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 hover:border-[#810100]/50 dark:hover:border-[#630102] transition-all duration-300 shadow-sm hover:shadow-xl group"
             >
-              <div className="p-3.5 rounded-xl bg-[#B8AFA0] dark:bg-[#B8AFA0] w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="p-3.5 rounded-xl bg-[#810100]/10 dark:bg-[#810100]/40 w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
                 {tech.icon}
               </div>
 
@@ -176,13 +176,13 @@ export default function TechSection() {
 
         {/* Technical Banner Callout */}
         <div className="relative mt-16">
-          <div className="absolute -inset-5 rounded-[2rem] bg-[#B8AFA0]/25 blur-2xl pointer-events-none" />
+          <div className="absolute -inset-5 rounded-[2rem] bg-[#810100]/25 blur-2xl pointer-events-none" />
           <div
-          className="relative p-8 md:p-12 rounded-2xl bg-[#B8AFA0] text-[#1B1716] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+          className="relative p-8 md:p-12 rounded-2xl bg-[#810100] text-[#EDEBDE] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
-            <span className="text-xs font-mono text-[#1B1716] uppercase tracking-widest block">
+            <span className="text-xs font-mono text-[#EDEBDE] uppercase tracking-widest block">
               {text.academy}
             </span>
 
@@ -190,7 +190,7 @@ export default function TechSection() {
               {text.academyTitle}
             </h3>
 
-            <p className="text-xs text-[#302927] font-light leading-relaxed">
+            <p className="text-xs text-[#EDEBDE]/80 font-light leading-relaxed">
               {text.academyDescription}
             </p>
           </div>
