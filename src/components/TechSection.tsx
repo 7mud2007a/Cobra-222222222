@@ -178,7 +178,7 @@ export default function TechSection() {
         <div className="relative mt-16">
           <div className="absolute -inset-5 rounded-[2rem] bg-[#810100]/25 blur-2xl pointer-events-none" />
           <div
-          className="relative p-8 md:p-12 rounded-2xl bg-[#810100] text-[#EDEBDE] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+          className="relative p-8 md:p-12 rounded-2xl bg-[#810100]/10 dark:bg-[#810100]/40 text-[#EDEBDE] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-black/5 dark:border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
