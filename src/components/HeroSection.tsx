@@ -44,12 +44,6 @@ export default function HeroSection({ onExploreClick }: HeroSectionProps) {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1B17160A_1px,transparent_1px),linear-gradient(to_bottom,#1B17160A_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
-      {/* Soft ivory-to-charcoal transition into the next section */}
-      <div className="absolute inset-x-0 bottom-0 h-64 z-[1] pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1B1716]/45 to-[#1B1716]" />
-        <div className="absolute -bottom-10 left-0 right-0 h-40 bg-[#1B1716]/55 blur-3xl" />
-      </div>
-
       {/* Main Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto w-full flex-1 flex flex-col justify-center my-auto">
         <div className="space-y-6 max-w-5xl">
