@@ -7,42 +7,42 @@ export default function TechSection() {
   const techPillars = isArabic
     ? [
         {
-          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Zap className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'منظومة الدفع الكمومية',
           subtitle: 'بنية 800V وكثافة طاقة بحالة صلبة',
           description:
             'خلايا بطاريات صلبة حصرية بهندسة أقطاب من مصفوفة الأنابيب النانوية الكربونية توفر أكثر من 1,450 حصانًا مع شبه انعدام التدهور الحراري.',
         },
         {
-          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Wind className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'قنوات الديناميكا الهوائية النشطة',
           subtitle: 'توجيه ديناميكي لتأثير الأرضية',
           description:
             'تعمل أنفاق Venturi السفلية على ضبط الرفارف الصوتية وشفرات الناشر الأمامي باستمرار لتوليد أكثر من 1,200 كغ من القوة الضاغطة عند سرعة 200 ميل/ساعة.',
         },
         {
-          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Cpu className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'نظام المقصورة العصبي',
           subtitle: 'ضبط تنبؤي للهيكل باستخدام الذكاء الاصطناعي',
           description:
             'يقوم مسح سطح الطريق لحظيًا عبر LiDAR والشبكات العصبية بضبط التخميد المغناطيسي كل 2 ميلي ثانية لتحقيق قيادة فائقة السلاسة.',
         },
         {
-          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Flame className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'هيكل مونوكوك من المغنيسيوم',
           subtitle: 'صلابة هيكلية فائقة الخفة',
           description:
             'يوفر هيكلًا مركبًا من الكربون والمغنيسيوم مكوّنًا من قطعة واحدة صلابة التوائية تتجاوز 65,000 نيوتن متر/درجة، مع خفض الوزن الإجمالي بنسبة 28%.',
         },
         {
-          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Eye className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'مصفوفة الإضاءة بالليزر',
           subtitle: 'دقة إضاءة تصل إلى 600 متر',
           description:
             'يقوم نظام الإضاءة الليزري المتكيف بتشكيل حزم الضوء ديناميكيًا حول حركة المرور القادمة، مع إضاءة المنعطفات بوضوح استثنائي.',
         },
         {
-          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Shield className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'مصفوفة الكربون والسيراميك',
           subtitle: 'مكابح Monoblock بعشرة مكابس',
           description:
@@ -51,42 +51,42 @@ export default function TechSection() {
       ]
     : [
         {
-          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Zap className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Quantum Powertrain',
           subtitle: '800V Architecture & Solid-State Energy Density',
           description:
             'Proprietary solid-state battery cells engineered with carbon-nanotube matrix electrodes deliver over 1,450 HP with near-zero thermal degradation.',
         },
         {
-          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Wind className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Active Aero Venturis',
           subtitle: 'Dynamic Ground Effect Channeling',
           description:
             'Underbody venturi tunnels continuously adjust acoustic flappers and front diffuser blades to generate over 1,200 kg of downforce at 200 MPH.',
         },
         {
-          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Cpu className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Neural Cockpit OS',
           subtitle: 'Predictive AI Dynamic Chassis Tuning',
           description:
             'Real-time road surface scanning via LiDAR and neural networks adapts magnetic dampening every 2 milliseconds for floating ride tranquility.',
         },
         {
-          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Flame className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Magnesium Monocoque',
           subtitle: 'Ultralight Structural Integrity',
           description:
             'A single-piece carbon-magnesium composite tub provides torsional rigidity exceeding 65,000 Nm/deg while reducing curb weight by 28%.',
         },
         {
-          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Eye className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Laserlight Matrix',
           subtitle: '600-Meter Illuminating Precision',
           description:
             'Adaptive laser matrix beam projection dynamically shapes light cones around oncoming traffic while illuminating turns with crystal clarity.',
         },
         {
-          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
+          icon: <Shield className="w-8 h-8 text-[#B8AFA0] dark:text-[#B8AFA0]" />,
           title: 'Carbon-Ceramic Matrix',
           subtitle: '10-Piston Monoblock Braking',
           description:
