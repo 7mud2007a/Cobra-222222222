@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import AnimatedNavbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -9,6 +9,8 @@ import SocialSection from './components/SocialSection';
 import Footer from './components/Footer';
 
 export default function App() {
+  const [showCarsOnly, setShowCarsOnly] = useState(false);
+
   useLayoutEffect(() => {
     // Always start at the hero instead of restoring a previous footer scroll position.
     if ('scrollRestoration' in window.history) {
@@ -27,15 +29,23 @@ export default function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-[#1B1716] text-[#EDEBDE] font-sans selection:bg-[#810100] selection:text-white transition-colors duration-300">
-        <AnimatedNavbar onNavigate={handleNavigate} />
-        <main>
-          <HeroSection onExploreClick={() => handleNavigate('cars')} />
-          <CarsSection />
-          <TechSection />
-          <AboutSection />
-          <SocialSection />
-        </main>
-        <Footer />
+        {showCarsOnly ? (
+          <main>
+            <CarsSection standalone onBack={() => { setShowCarsOnly(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />
+          </main>
+        ) : (
+          <>
+            <AnimatedNavbar onNavigate={handleNavigate} />
+            <main>
+              <HeroSection onExploreClick={() => handleNavigate('cars')} />
+              <CarsSection onViewAll={() => { setShowCarsOnly(true); window.scrollTo({ top: 0, behavior: 'instant' }); }} />
+              <TechSection />
+              <AboutSection />
+              <SocialSection />
+            </main>
+            <Footer />
+          </>
+        )}
       </div>
     </ThemeProvider>
   );
