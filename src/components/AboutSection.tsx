@@ -110,7 +110,7 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-black/10 dark:border-white/10">
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#b64b48]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#810100]">
                   100%
                 </span>
 
@@ -120,7 +120,7 @@ export default function AboutSection() {
               </div>
 
               <div>
-                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#b64b48]">
+                <span className="font-cinzel text-3xl font-extrabold text-[#810100] dark:text-[#810100]">
                   25
                 </span>
 
@@ -135,7 +135,7 @@ export default function AboutSection() {
         {/* Brand Timeline Milestones */}
         <div>
           <div className="text-center mb-12">
-            <span className="text-xs font-mono text-[#810100] dark:text-[#b64b48] uppercase tracking-widest block mb-2">
+            <span className="text-xs font-mono text-[#810100] dark:text-[#810100] uppercase tracking-widest block mb-2">
               {text.chronology}
             </span>
 
@@ -150,7 +150,7 @@ export default function AboutSection() {
                 key={idx}
                 className="p-6 rounded-2xl bg-[#261e1c] border border-black/5 dark:border-white/10 relative overflow-hidden group hover:border-[#810100] transition-colors"
               >
-                <div className="text-4xl font-cinzel font-extrabold text-[#810100] dark:text-[#b64b48] mb-2">
+                <div className="text-4xl font-cinzel font-extrabold text-[#810100] dark:text-[#810100] mb-2">
                   {m.year}
                 </div>
 
