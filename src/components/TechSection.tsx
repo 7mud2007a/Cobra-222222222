@@ -175,8 +175,10 @@ export default function TechSection() {
         </div>
 
         {/* Technical Banner Callout */}
-        <div
-          className="mt-16 p-8 md:p-12 rounded-2xl bg-[#B8AFA0] text-[#1B1716] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+        <div className="relative mt-16">
+          <div className="absolute -inset-5 rounded-[2rem] bg-[#B8AFA0]/25 blur-2xl pointer-events-none" />
+          <div
+          className="relative p-8 md:p-12 rounded-2xl bg-[#B8AFA0] text-[#1B1716] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
@@ -205,6 +207,7 @@ export default function TechSection() {
           >
             {text.briefing}
           </button>
+          </div>
         </div>
       </div>
     </section>
