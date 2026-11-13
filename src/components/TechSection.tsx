@@ -203,7 +203,7 @@ export default function TechSection() {
                 el.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="px-8 py-4 bg-[#1B1716] text-[#EDEBDE] hover:bg-[#302927] font-mono text-xs uppercase tracking-widest rounded-lg font-bold transition-all shadow-lg whitespace-nowrap"
+            className="px-8 py-4 bg-[#EDEBDE] text-[#1B1716] hover:bg-[#d8d2c4] font-mono text-xs uppercase tracking-widest rounded-lg font-bold transition-all shadow-lg whitespace-nowrap"
           >
             {text.briefing}
           </button>
