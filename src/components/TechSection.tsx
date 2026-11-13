@@ -7,42 +7,42 @@ export default function TechSection() {
   const techPillars = isArabic
     ? [
         {
-          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'منظومة الدفع الكمومية',
           subtitle: 'بنية 800V وكثافة طاقة بحالة صلبة',
           description:
             'خلايا بطاريات صلبة حصرية بهندسة أقطاب من مصفوفة الأنابيب النانوية الكربونية توفر أكثر من 1,450 حصانًا مع شبه انعدام التدهور الحراري.',
         },
         {
-          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'قنوات الديناميكا الهوائية النشطة',
           subtitle: 'توجيه ديناميكي لتأثير الأرضية',
           description:
             'تعمل أنفاق Venturi السفلية على ضبط الرفارف الصوتية وشفرات الناشر الأمامي باستمرار لتوليد أكثر من 1,200 كغ من القوة الضاغطة عند سرعة 200 ميل/ساعة.',
         },
         {
-          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'نظام المقصورة العصبي',
           subtitle: 'ضبط تنبؤي للهيكل باستخدام الذكاء الاصطناعي',
           description:
             'يقوم مسح سطح الطريق لحظيًا عبر LiDAR والشبكات العصبية بضبط التخميد المغناطيسي كل 2 ميلي ثانية لتحقيق قيادة فائقة السلاسة.',
         },
         {
-          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'هيكل مونوكوك من المغنيسيوم',
           subtitle: 'صلابة هيكلية فائقة الخفة',
           description:
             'يوفر هيكلًا مركبًا من الكربون والمغنيسيوم مكوّنًا من قطعة واحدة صلابة التوائية تتجاوز 65,000 نيوتن متر/درجة، مع خفض الوزن الإجمالي بنسبة 28%.',
         },
         {
-          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'مصفوفة الإضاءة بالليزر',
           subtitle: 'دقة إضاءة تصل إلى 600 متر',
           description:
             'يقوم نظام الإضاءة الليزري المتكيف بتشكيل حزم الضوء ديناميكيًا حول حركة المرور القادمة، مع إضاءة المنعطفات بوضوح استثنائي.',
         },
         {
-          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'مصفوفة الكربون والسيراميك',
           subtitle: 'مكابح Monoblock بعشرة مكابس',
           description:
@@ -51,42 +51,42 @@ export default function TechSection() {
       ]
     : [
         {
-          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Zap className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Quantum Powertrain',
           subtitle: '800V Architecture & Solid-State Energy Density',
           description:
             'Proprietary solid-state battery cells engineered with carbon-nanotube matrix electrodes deliver over 1,450 HP with near-zero thermal degradation.',
         },
         {
-          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Wind className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Active Aero Venturis',
           subtitle: 'Dynamic Ground Effect Channeling',
           description:
             'Underbody venturi tunnels continuously adjust acoustic flappers and front diffuser blades to generate over 1,200 kg of downforce at 200 MPH.',
         },
         {
-          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Cpu className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Neural Cockpit OS',
           subtitle: 'Predictive AI Dynamic Chassis Tuning',
           description:
             'Real-time road surface scanning via LiDAR and neural networks adapts magnetic dampening every 2 milliseconds for floating ride tranquility.',
         },
         {
-          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Flame className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Magnesium Monocoque',
           subtitle: 'Ultralight Structural Integrity',
           description:
             'A single-piece carbon-magnesium composite tub provides torsional rigidity exceeding 65,000 Nm/deg while reducing curb weight by 28%.',
         },
         {
-          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Eye className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Laserlight Matrix',
           subtitle: '600-Meter Illuminating Precision',
           description:
             'Adaptive laser matrix beam projection dynamically shapes light cones around oncoming traffic while illuminating turns with crystal clarity.',
         },
         {
-          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#b64b48]" />,
+          icon: <Shield className="w-8 h-8 text-[#810100] dark:text-[#EDEBDE]" />,
           title: 'Carbon-Ceramic Matrix',
           subtitle: '10-Piston Monoblock Braking',
           description:
@@ -132,7 +132,7 @@ export default function TechSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <span className="inline-block text-xs font-mono tracking-[0.35em] uppercase text-[#810100] dark:text-[#b64b48]">
+          <span className="inline-block text-xs font-mono tracking-[0.35em] uppercase text-[#810100] dark:text-[#EDEBDE]">
             {text.eyebrow}
           </span>
 
@@ -159,7 +159,7 @@ export default function TechSection() {
                 {tech.icon}
               </div>
 
-              <span className="text-[10px] font-mono tracking-widest text-[#810100] dark:text-[#b64b48] uppercase block mb-1">
+              <span className="text-[10px] font-mono tracking-widest text-[#810100] dark:text-[#EDEBDE] uppercase block mb-1">
                 {tech.subtitle}
               </span>
 
@@ -176,7 +176,7 @@ export default function TechSection() {
 
         {/* Technical Banner Callout */}
         <div
-          className="mt-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-[#810100] to-[#1B1716] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
+          className="mt-16 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-[#261E1C] to-[#1B1716] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-white/10"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
