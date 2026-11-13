@@ -299,7 +299,7 @@ export default function CinematicExperience() {
         {/* Top Header Tagline & Progress Indicator */}
         <div className="relative z-10 w-full max-w-7xl flex items-center justify-between pointer-events-none">
           <div className="flex items-center space-x-3 bg-black/60 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
-            <Sparkles className="w-4 h-4 text-[#b64b48]" />
+            <Sparkles className="w-4 h-4 text-[#810100]" />
             <span className="text-xs font-mono tracking-widest text-slate-300 uppercase">
               BMW M5 CS TRANSFORM SEQUENCE
             </span>
@@ -307,10 +307,10 @@ export default function CinematicExperience() {
 
           {/* Progress Bar */}
           <div className="flex items-center space-x-4 bg-black/60 border border-white/10 px-5 py-2 rounded-full backdrop-blur-md">
-            <Layers className="w-4 h-4 text-[#b64b48]" />
+            <Layers className="w-4 h-4 text-[#810100]" />
             <div className="w-28 h-1.5 bg-[#EDEBDE]/20 rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#810100] dark:bg-[#b64b48] transition-all duration-150 ease-out"
+                className="h-full bg-[#810100] dark:bg-[#810100] transition-all duration-150 ease-out"
                 style={{ width: `${Math.round(progress * 100)}%` }}
               />
             </div>
@@ -346,7 +346,7 @@ export default function CinematicExperience() {
           <div className="hidden sm:block">
             FRAME SEQUENCE READY: <span className="text-emerald-400">/frames/frame001.png</span>
           </div>
-          <div className="animate-pulse text-[#b64b48] ml-auto">
+          <div className="animate-pulse text-[#810100] ml-auto">
             SCROLL CONTROL ➔
           </div>
         </div>
