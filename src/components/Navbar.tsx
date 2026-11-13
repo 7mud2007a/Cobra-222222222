@@ -251,14 +251,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
           transform: translate(-50%, calc(-50% - 120px));
         }
 
-        .anim-nav-container .brand-mark {
-          transition: transform 0.35s ease;
-        }
-
-        .anim-nav-container.header-hidden .brand-mark {
-          transform: translateY(-120px);
-        }
-
         @media (max-width: 640px) {
           .anim-nav-container button.btn {
             left: 36px;
@@ -406,23 +398,6 @@ export default function AnimatedNavbar({ onNavigate }: NavbarProps) {
       />
 
       <div className={`anim-nav-container relative w-full max-w-full h-full box-border ${headerVisible ? '' : 'header-hidden'}`}>
-        <div
-          className="brand-mark fixed top-0 left-0 right-0 h-24 px-3 sm:px-6 md:px-14 flex items-center justify-center z-40 pointer-events-none w-full max-w-full box-border"
-          dir="ltr"
-        >
-          <div
-            className="flex items-center justify-center cursor-pointer min-w-0 px-1 overflow-hidden pointer-events-auto"
-            onClick={() => handleNavClick('hero')}
-          >
-            <span className="font-cinzel text-xs sm:text-lg md:text-2xl font-bold tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.25em] text-[#1B1716] transition-colors duration-300 whitespace-nowrap truncate">
-              COBRA{' '}
-              <span className="text-[#810100]">
-                MOTORS
-              </span>
-            </span>
-          </div>
-        </div>
-
         <button
           className="btn"
           onClick={handleToggleClick}
