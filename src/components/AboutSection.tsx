@@ -114,7 +114,7 @@ export default function AboutSection() {
                   100%
                 </span>
 
-                <span className="block text-xs font-mono text-slate-500 uppercase mt-1">
+                <span className="block text-xs font-mono text-[#c9c3b5] uppercase mt-1">
                   {text.handcrafted}
                 </span>
               </div>
@@ -124,7 +124,7 @@ export default function AboutSection() {
                   25
                 </span>
 
-                <span className="block text-xs font-mono text-slate-500 uppercase mt-1">
+                <span className="block text-xs font-mono text-[#c9c3b5] uppercase mt-1">
                   {text.allocations}
                 </span>
               </div>
