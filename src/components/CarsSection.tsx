@@ -203,7 +203,7 @@ const CAR_TRANSLATIONS: Record<
   },
 };
 
-export default function CarsSection() {
+export default function CarsSection({ standalone = false, onViewAll, onBack }: { standalone?: boolean; onViewAll?: () => void; onBack?: () => void }) {
   const [selectedCar, setSelectedCar] = useState<CarModel | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const { isArabic } = useLanguage();
@@ -288,6 +288,14 @@ export default function CarsSection() {
       dir={isArabic ? 'rtl' : 'ltr'}
       className="relative py-28 px-6 md:px-16 w-full bg-[#1B1716] text-[#EDEBDE] transition-colors duration-300 border-t border-black/5 dark:border-white/5"
     >
+      {standalone && (
+        <div className="max-w-7xl mx-auto mb-8">
+          <button onClick={onBack} className="px-5 py-3 rounded-lg border border-[#EDEBDE]/25 text-[#EDEBDE] hover:bg-[#EDEBDE]/10 transition-colors font-mono text-xs tracking-widest">
+            {isArabic ? 'العودة إلى الموقع' : 'BACK TO WEBSITE'}
+          </button>
+        </div>
+      )}
+
       {/* Section Header */}
       <div className="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
@@ -338,8 +346,8 @@ export default function CarsSection() {
       </div>
 
       {/* Fleet Cards Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {filteredCars.map((car) => {
+      <div className="max-w-7xl mx-auto grid grid-cols-2 gap-4 md:gap-8">
+        {(standalone ? filteredCars : filteredCars.slice(0, 2)).map((car) => {
           const carText = getCarText(car);
 
           return (
@@ -424,6 +432,14 @@ export default function CarsSection() {
           );
         })}
       </div>
+
+      {!standalone && onViewAll && (
+        <div className="max-w-7xl mx-auto mt-12 flex justify-center">
+          <button onClick={onViewAll} className="px-10 py-4 rounded-lg bg-[#EDEBDE] text-[#1B1716] hover:bg-[#d8d2c4] transition-colors font-mono text-xs font-bold tracking-widest">
+            {isArabic ? 'عرض السيارات كاملة' : 'VIEW ALL CARS'}
+          </button>
+        </div>
+      )}
 
       {/* Car Modal Detailed View */}
       {selectedCar && (
