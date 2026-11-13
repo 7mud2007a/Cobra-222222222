@@ -51,7 +51,6 @@ export default function AboutSection() {
 
   const text = isArabic
     ? {
-        heritage: '[ الإرث والرؤية ]',
         art: 'فن',
         automotive: 'هندسة السيارات',
         perfection: 'المثالية',
@@ -63,7 +62,6 @@ export default function AboutSection() {
         journey: 'رحلتنا نحو القمة',
       }
     : {
-        heritage: '[ HERITAGE & VISION ]',
         art: 'THE ART OF',
         automotive: 'AUTOMOTIVE',
         perfection: 'PERFECTION',
@@ -85,10 +83,6 @@ export default function AboutSection() {
         {/* Brand Philosophy Intro */}
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="space-y-6">
-            <span className="inline-block text-xs font-mono tracking-[0.35em] uppercase text-[#810100] dark:text-[#b64b48]">
-              {text.heritage}
-            </span>
-
             <h2 className="font-cinzel text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
               {isArabic ? (
                 <>
