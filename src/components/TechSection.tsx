@@ -178,11 +178,11 @@ export default function TechSection() {
         <div className="relative mt-16">
           <div className="absolute -inset-5 rounded-[2rem] bg-[#810100]/25 blur-2xl pointer-events-none" />
           <div
-          className="relative p-8 md:p-12 rounded-2xl bg-[#810100]/10 dark:bg-[#810100]/40 text-[#EDEBDE] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-black/5 dark:border-white/10"
+          className="relative p-8 md:p-12 rounded-2xl bg-[#EDEBDE] text-[#1B1716] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl border border-black/5"
           dir={isArabic ? 'rtl' : 'ltr'}
         >
           <div className="space-y-2 max-w-2xl">
-            <span className="text-xs font-mono text-[#EDEBDE] uppercase tracking-widest block">
+            <span className="text-xs font-mono text-[#1B1716] uppercase tracking-widest block">
               {text.academy}
             </span>
 
@@ -190,7 +190,7 @@ export default function TechSection() {
               {text.academyTitle}
             </h3>
 
-            <p className="text-xs text-[#EDEBDE]/80 font-light leading-relaxed">
+            <p className="text-xs text-[#1B1716]/80 font-light leading-relaxed">
               {text.academyDescription}
             </p>
           </div>
